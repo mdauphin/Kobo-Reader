@@ -1,0 +1,3599 @@
+diff -ru glib-2.22.0.ori/glib/.deps/gatomic.Plo glib-2.22.0/glib/.deps/gatomic.Plo
+--- glib-2.22.0.ori/glib/.deps/gatomic.Plo	2015-08-13 20:54:31.158093198 +0200
++++ glib-2.22.0/glib/.deps/gatomic.Plo	2015-08-13 21:07:45.270065704 +0200
+@@ -1 +1,69 @@
+-# dummy
++gatomic.lo: gatomic.c ../config.h gatomic.h ../glib/gtypes.h \
++ ../glibconfig.h ../glib/gmacros.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stddef.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/syslimits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/features.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/predefs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/cdefs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/wordsize.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/gnu/stubs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/local_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/float.h \
++ gthread.h ../glib/gerror.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stdarg.h \
++ ../glib/gquark.h ../glib/gutils.h ../glib/gatomic.h
++
++../config.h:
++
++gatomic.h:
++
++../glib/gtypes.h:
++
++../glibconfig.h:
++
++../glib/gmacros.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stddef.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/syslimits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/features.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/predefs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/cdefs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/wordsize.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/gnu/stubs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/local_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/float.h:
++
++gthread.h:
++
++../glib/gerror.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stdarg.h:
++
++../glib/gquark.h:
++
++../glib/gutils.h:
++
++../glib/gatomic.h:
+diff -ru glib-2.22.0.ori/glib/.deps/gbase64.Plo glib-2.22.0/glib/.deps/gbase64.Plo
+--- glib-2.22.0.ori/glib/.deps/gbase64.Plo	2015-08-13 20:54:31.158093198 +0200
++++ glib-2.22.0/glib/.deps/gbase64.Plo	2015-08-13 21:07:45.558065694 +0200
+@@ -1 +1,256 @@
+-# dummy
++gbase64.lo: gbase64.c ../config.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/string.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/features.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/predefs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/cdefs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/wordsize.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/gnu/stubs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stddef.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/xlocale.h \
++ gbase64.h ../glib/gtypes.h ../glibconfig.h ../glib/gmacros.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/syslimits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/local_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/float.h \
++ glib.h ../glib/galloca.h ../glib/garray.h ../glib/gasyncqueue.h \
++ ../glib/gthread.h ../glib/gerror.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stdarg.h \
++ ../glib/gquark.h ../glib/gutils.h ../glib/gatomic.h ../glib/gbacktrace.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/signal.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigset.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/types.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/typesizes.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/signum.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/time.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/siginfo.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigaction.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigcontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/asm/sigcontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigstack.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/ucontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/endian.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/endian.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/byteswap.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigthread.h \
++ ../glib/gbase64.h ../glib/gbookmarkfile.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/time.h \
++ ../glib/gcache.h ../glib/glist.h ../glib/gmem.h ../glib/gslice.h \
++ ../glib/gchecksum.h ../glib/gcompletion.h ../glib/gconvert.h \
++ ../glib/gdataset.h ../glib/gdate.h ../glib/gdir.h ../glib/gfileutils.h \
++ ../glib/ghash.h ../glib/ghook.h ../glib/ghostutils.h \
++ ../glib/giochannel.h ../glib/gmain.h ../glib/gpoll.h ../glib/gslist.h \
++ ../glib/gstring.h ../glib/gunicode.h ../glib/gkeyfile.h \
++ ../glib/gmappedfile.h ../glib/gmarkup.h ../glib/gmessages.h \
++ ../glib/gnode.h ../glib/goption.h ../glib/gpattern.h ../glib/gprimes.h \
++ ../glib/gqsort.h ../glib/gqueue.h ../glib/grand.h ../glib/grel.h \
++ ../glib/gregex.h ../glib/gscanner.h ../glib/gsequence.h ../glib/gshell.h \
++ ../glib/gspawn.h ../glib/gstrfuncs.h ../glib/gtestutils.h glib.h \
++ ../glib/gthreadpool.h ../glib/gtimer.h ../glib/gtree.h \
++ ../glib/gurifuncs.h glibintl.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/libintl.h \
++ galias.h galiasdef.c
++
++../config.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/string.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/features.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/predefs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/cdefs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/wordsize.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/gnu/stubs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stddef.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/xlocale.h:
++
++gbase64.h:
++
++../glib/gtypes.h:
++
++../glibconfig.h:
++
++../glib/gmacros.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/syslimits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/local_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/float.h:
++
++glib.h:
++
++../glib/galloca.h:
++
++../glib/garray.h:
++
++../glib/gasyncqueue.h:
++
++../glib/gthread.h:
++
++../glib/gerror.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stdarg.h:
++
++../glib/gquark.h:
++
++../glib/gutils.h:
++
++../glib/gatomic.h:
++
++../glib/gbacktrace.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/signal.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigset.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/types.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/typesizes.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/signum.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/time.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/siginfo.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigaction.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigcontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/asm/sigcontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigstack.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/ucontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/endian.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/endian.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/byteswap.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigthread.h:
++
++../glib/gbase64.h:
++
++../glib/gbookmarkfile.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/time.h:
++
++../glib/gcache.h:
++
++../glib/glist.h:
++
++../glib/gmem.h:
++
++../glib/gslice.h:
++
++../glib/gchecksum.h:
++
++../glib/gcompletion.h:
++
++../glib/gconvert.h:
++
++../glib/gdataset.h:
++
++../glib/gdate.h:
++
++../glib/gdir.h:
++
++../glib/gfileutils.h:
++
++../glib/ghash.h:
++
++../glib/ghook.h:
++
++../glib/ghostutils.h:
++
++../glib/giochannel.h:
++
++../glib/gmain.h:
++
++../glib/gpoll.h:
++
++../glib/gslist.h:
++
++../glib/gstring.h:
++
++../glib/gunicode.h:
++
++../glib/gkeyfile.h:
++
++../glib/gmappedfile.h:
++
++../glib/gmarkup.h:
++
++../glib/gmessages.h:
++
++../glib/gnode.h:
++
++../glib/goption.h:
++
++../glib/gpattern.h:
++
++../glib/gprimes.h:
++
++../glib/gqsort.h:
++
++../glib/gqueue.h:
++
++../glib/grand.h:
++
++../glib/grel.h:
++
++../glib/gregex.h:
++
++../glib/gscanner.h:
++
++../glib/gsequence.h:
++
++../glib/gshell.h:
++
++../glib/gspawn.h:
++
++../glib/gstrfuncs.h:
++
++../glib/gtestutils.h:
++
++glib.h:
++
++../glib/gthreadpool.h:
++
++../glib/gtimer.h:
++
++../glib/gtree.h:
++
++../glib/gurifuncs.h:
++
++glibintl.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/libintl.h:
++
++galias.h:
++
++galiasdef.c:
+diff -ru glib-2.22.0.ori/glib/.deps/gbookmarkfile.Plo glib-2.22.0/glib/.deps/gbookmarkfile.Plo
+--- glib-2.22.0.ori/glib/.deps/gbookmarkfile.Plo	2015-08-13 20:54:31.158093198 +0200
++++ glib-2.22.0/glib/.deps/gbookmarkfile.Plo	2015-08-13 21:07:45.858065683 +0200
+@@ -1 +1,388 @@
+-# dummy
++gbookmarkfile.lo: gbookmarkfile.c ../config.h gbookmarkfile.h \
++ ../glib/gerror.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stdarg.h \
++ ../glib/gquark.h ../glib/gtypes.h ../glibconfig.h ../glib/gmacros.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stddef.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/syslimits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/features.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/predefs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/cdefs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/wordsize.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/gnu/stubs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/local_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/float.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/time.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/time.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/types.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/typesizes.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/xlocale.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/stdio.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/libio.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/_G_config.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/wchar.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/stdio_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/stdlib.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/waitflags.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/waitstatus.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/endian.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/endian.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/byteswap.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/types.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/select.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/select.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigset.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/sysmacros.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/alloca.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/string.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/errno.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/errno.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/errno.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/asm/errno.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/asm-generic/errno.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/asm-generic/errno-base.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/fcntl.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/fcntl.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/stat.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/locale.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/locale.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/stat.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/unistd.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix_opt.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/environments.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/confname.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/getopt.h \
++ gconvert.h gdataset.h gerror.h gfileutils.h ghash.h ../glib/glist.h \
++ ../glib/gmem.h ../glib/gslice.h glibintl.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/libintl.h \
++ glist.h gslist.h gmain.h ../glib/gpoll.h ../glib/gslist.h \
++ ../glib/gthread.h ../glib/gutils.h ../glib/gatomic.h gmarkup.h gmem.h \
++ gmessages.h gshell.h gslice.h gstdio.h ../glib/gprintf.h glib.h \
++ ../glib/galloca.h ../glib/garray.h ../glib/gasyncqueue.h \
++ ../glib/gbacktrace.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/signal.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/signum.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/siginfo.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigaction.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigcontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/asm/sigcontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigstack.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/ucontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigthread.h \
++ ../glib/gbase64.h ../glib/gbookmarkfile.h ../glib/gcache.h \
++ ../glib/gchecksum.h ../glib/gcompletion.h ../glib/gconvert.h \
++ ../glib/gdataset.h ../glib/gdate.h ../glib/gdir.h ../glib/gfileutils.h \
++ ../glib/ghash.h ../glib/ghook.h ../glib/ghostutils.h \
++ ../glib/giochannel.h ../glib/gmain.h ../glib/gstring.h \
++ ../glib/gunicode.h ../glib/gkeyfile.h ../glib/gmappedfile.h \
++ ../glib/gmarkup.h ../glib/gmessages.h ../glib/gnode.h ../glib/goption.h \
++ ../glib/gpattern.h ../glib/gprimes.h ../glib/gqsort.h ../glib/gqueue.h \
++ ../glib/grand.h ../glib/grel.h ../glib/gregex.h ../glib/gscanner.h \
++ ../glib/gsequence.h ../glib/gshell.h ../glib/gspawn.h \
++ ../glib/gstrfuncs.h ../glib/gtestutils.h ../glib/gthreadpool.h \
++ ../glib/gtimer.h ../glib/gtree.h ../glib/gurifuncs.h gstring.h \
++ gstrfuncs.h gtimer.h gutils.h galias.h galiasdef.c
++
++../config.h:
++
++gbookmarkfile.h:
++
++../glib/gerror.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stdarg.h:
++
++../glib/gquark.h:
++
++../glib/gtypes.h:
++
++../glibconfig.h:
++
++../glib/gmacros.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stddef.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/syslimits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/features.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/predefs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/cdefs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/wordsize.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/gnu/stubs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/local_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/float.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/time.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/time.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/types.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/typesizes.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/xlocale.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/stdio.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/libio.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/_G_config.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/wchar.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/stdio_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sys_errlist.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/stdlib.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/waitflags.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/waitstatus.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/endian.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/endian.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/byteswap.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/types.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/select.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/select.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigset.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/sysmacros.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/alloca.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/string.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/errno.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/errno.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/errno.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/asm/errno.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/asm-generic/errno.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/asm-generic/errno-base.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/fcntl.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/fcntl.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/stat.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/locale.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/locale.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/stat.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/unistd.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix_opt.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/environments.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/confname.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/getopt.h:
++
++gconvert.h:
++
++gdataset.h:
++
++gerror.h:
++
++gfileutils.h:
++
++ghash.h:
++
++../glib/glist.h:
++
++../glib/gmem.h:
++
++../glib/gslice.h:
++
++glibintl.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/libintl.h:
++
++glist.h:
++
++gslist.h:
++
++gmain.h:
++
++../glib/gpoll.h:
++
++../glib/gslist.h:
++
++../glib/gthread.h:
++
++../glib/gutils.h:
++
++../glib/gatomic.h:
++
++gmarkup.h:
++
++gmem.h:
++
++gmessages.h:
++
++gshell.h:
++
++gslice.h:
++
++gstdio.h:
++
++../glib/gprintf.h:
++
++glib.h:
++
++../glib/galloca.h:
++
++../glib/garray.h:
++
++../glib/gasyncqueue.h:
++
++../glib/gbacktrace.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/signal.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/signum.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/siginfo.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigaction.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigcontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/asm/sigcontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigstack.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/ucontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigthread.h:
++
++../glib/gbase64.h:
++
++../glib/gbookmarkfile.h:
++
++../glib/gcache.h:
++
++../glib/gchecksum.h:
++
++../glib/gcompletion.h:
++
++../glib/gconvert.h:
++
++../glib/gdataset.h:
++
++../glib/gdate.h:
++
++../glib/gdir.h:
++
++../glib/gfileutils.h:
++
++../glib/ghash.h:
++
++../glib/ghook.h:
++
++../glib/ghostutils.h:
++
++../glib/giochannel.h:
++
++../glib/gmain.h:
++
++../glib/gstring.h:
++
++../glib/gunicode.h:
++
++../glib/gkeyfile.h:
++
++../glib/gmappedfile.h:
++
++../glib/gmarkup.h:
++
++../glib/gmessages.h:
++
++../glib/gnode.h:
++
++../glib/goption.h:
++
++../glib/gpattern.h:
++
++../glib/gprimes.h:
++
++../glib/gqsort.h:
++
++../glib/gqueue.h:
++
++../glib/grand.h:
++
++../glib/grel.h:
++
++../glib/gregex.h:
++
++../glib/gscanner.h:
++
++../glib/gsequence.h:
++
++../glib/gshell.h:
++
++../glib/gspawn.h:
++
++../glib/gstrfuncs.h:
++
++../glib/gtestutils.h:
++
++../glib/gthreadpool.h:
++
++../glib/gtimer.h:
++
++../glib/gtree.h:
++
++../glib/gurifuncs.h:
++
++gstring.h:
++
++gstrfuncs.h:
++
++gtimer.h:
++
++gutils.h:
++
++galias.h:
++
++galiasdef.c:
+diff -ru glib-2.22.0.ori/glib/.deps/gcache.Plo glib-2.22.0/glib/.deps/gcache.Plo
+--- glib-2.22.0.ori/glib/.deps/gcache.Plo	2015-08-13 20:54:31.158093198 +0200
++++ glib-2.22.0/glib/.deps/gcache.Plo	2015-08-13 21:07:46.006065678 +0200
+@@ -1 +1,245 @@
+-# dummy
++gcache.lo: gcache.c ../config.h glib.h ../glib/galloca.h ../glib/gtypes.h \
++ ../glibconfig.h ../glib/gmacros.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stddef.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/syslimits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/features.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/predefs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/cdefs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/wordsize.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/gnu/stubs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/local_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/float.h \
++ ../glib/garray.h ../glib/gasyncqueue.h ../glib/gthread.h \
++ ../glib/gerror.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stdarg.h \
++ ../glib/gquark.h ../glib/gutils.h ../glib/gatomic.h ../glib/gbacktrace.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/signal.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigset.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/types.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/typesizes.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/signum.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/time.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/siginfo.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigaction.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigcontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/asm/sigcontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigstack.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/ucontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/endian.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/endian.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/byteswap.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigthread.h \
++ ../glib/gbase64.h ../glib/gbookmarkfile.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/time.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/xlocale.h \
++ ../glib/gcache.h ../glib/glist.h ../glib/gmem.h ../glib/gslice.h \
++ ../glib/gchecksum.h ../glib/gcompletion.h ../glib/gconvert.h \
++ ../glib/gdataset.h ../glib/gdate.h ../glib/gdir.h ../glib/gfileutils.h \
++ ../glib/ghash.h ../glib/ghook.h ../glib/ghostutils.h \
++ ../glib/giochannel.h ../glib/gmain.h ../glib/gpoll.h ../glib/gslist.h \
++ ../glib/gstring.h ../glib/gunicode.h ../glib/gkeyfile.h \
++ ../glib/gmappedfile.h ../glib/gmarkup.h ../glib/gmessages.h \
++ ../glib/gnode.h ../glib/goption.h ../glib/gpattern.h ../glib/gprimes.h \
++ ../glib/gqsort.h ../glib/gqueue.h ../glib/grand.h ../glib/grel.h \
++ ../glib/gregex.h ../glib/gscanner.h ../glib/gsequence.h ../glib/gshell.h \
++ ../glib/gspawn.h ../glib/gstrfuncs.h ../glib/gtestutils.h glib.h \
++ ../glib/gthreadpool.h ../glib/gtimer.h ../glib/gtree.h \
++ ../glib/gurifuncs.h galias.h galiasdef.c
++
++../config.h:
++
++glib.h:
++
++../glib/galloca.h:
++
++../glib/gtypes.h:
++
++../glibconfig.h:
++
++../glib/gmacros.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stddef.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/syslimits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/features.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/predefs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/cdefs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/wordsize.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/gnu/stubs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/local_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/float.h:
++
++../glib/garray.h:
++
++../glib/gasyncqueue.h:
++
++../glib/gthread.h:
++
++../glib/gerror.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stdarg.h:
++
++../glib/gquark.h:
++
++../glib/gutils.h:
++
++../glib/gatomic.h:
++
++../glib/gbacktrace.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/signal.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigset.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/types.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/typesizes.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/signum.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/time.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/siginfo.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigaction.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigcontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/asm/sigcontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigstack.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/ucontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/endian.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/endian.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/byteswap.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigthread.h:
++
++../glib/gbase64.h:
++
++../glib/gbookmarkfile.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/time.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/xlocale.h:
++
++../glib/gcache.h:
++
++../glib/glist.h:
++
++../glib/gmem.h:
++
++../glib/gslice.h:
++
++../glib/gchecksum.h:
++
++../glib/gcompletion.h:
++
++../glib/gconvert.h:
++
++../glib/gdataset.h:
++
++../glib/gdate.h:
++
++../glib/gdir.h:
++
++../glib/gfileutils.h:
++
++../glib/ghash.h:
++
++../glib/ghook.h:
++
++../glib/ghostutils.h:
++
++../glib/giochannel.h:
++
++../glib/gmain.h:
++
++../glib/gpoll.h:
++
++../glib/gslist.h:
++
++../glib/gstring.h:
++
++../glib/gunicode.h:
++
++../glib/gkeyfile.h:
++
++../glib/gmappedfile.h:
++
++../glib/gmarkup.h:
++
++../glib/gmessages.h:
++
++../glib/gnode.h:
++
++../glib/goption.h:
++
++../glib/gpattern.h:
++
++../glib/gprimes.h:
++
++../glib/gqsort.h:
++
++../glib/gqueue.h:
++
++../glib/grand.h:
++
++../glib/grel.h:
++
++../glib/gregex.h:
++
++../glib/gscanner.h:
++
++../glib/gsequence.h:
++
++../glib/gshell.h:
++
++../glib/gspawn.h:
++
++../glib/gstrfuncs.h:
++
++../glib/gtestutils.h:
++
++glib.h:
++
++../glib/gthreadpool.h:
++
++../glib/gtimer.h:
++
++../glib/gtree.h:
++
++../glib/gurifuncs.h:
++
++galias.h:
++
++galiasdef.c:
+diff -ru glib-2.22.0.ori/glib/.deps/gchecksum.Plo glib-2.22.0/glib/.deps/gchecksum.Plo
+--- glib-2.22.0.ori/glib/.deps/gchecksum.Plo	2015-08-13 20:54:31.158093198 +0200
++++ glib-2.22.0/glib/.deps/gchecksum.Plo	2015-08-13 21:07:46.334065667 +0200
+@@ -1 +1,256 @@
+-# dummy
++gchecksum.lo: gchecksum.c ../config.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/string.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/features.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/predefs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/cdefs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/wordsize.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/gnu/stubs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stddef.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/xlocale.h \
++ ../glibconfig.h ../glib/gmacros.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/syslimits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/local_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/float.h \
++ gchecksum.h ../glib/gtypes.h glib.h ../glib/galloca.h ../glib/garray.h \
++ ../glib/gasyncqueue.h ../glib/gthread.h ../glib/gerror.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stdarg.h \
++ ../glib/gquark.h ../glib/gutils.h ../glib/gatomic.h ../glib/gbacktrace.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/signal.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigset.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/types.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/typesizes.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/signum.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/time.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/siginfo.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigaction.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigcontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/asm/sigcontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigstack.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/ucontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/endian.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/endian.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/byteswap.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigthread.h \
++ ../glib/gbase64.h ../glib/gbookmarkfile.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/time.h \
++ ../glib/gcache.h ../glib/glist.h ../glib/gmem.h ../glib/gslice.h \
++ ../glib/gchecksum.h ../glib/gcompletion.h ../glib/gconvert.h \
++ ../glib/gdataset.h ../glib/gdate.h ../glib/gdir.h ../glib/gfileutils.h \
++ ../glib/ghash.h ../glib/ghook.h ../glib/ghostutils.h \
++ ../glib/giochannel.h ../glib/gmain.h ../glib/gpoll.h ../glib/gslist.h \
++ ../glib/gstring.h ../glib/gunicode.h ../glib/gkeyfile.h \
++ ../glib/gmappedfile.h ../glib/gmarkup.h ../glib/gmessages.h \
++ ../glib/gnode.h ../glib/goption.h ../glib/gpattern.h ../glib/gprimes.h \
++ ../glib/gqsort.h ../glib/gqueue.h ../glib/grand.h ../glib/grel.h \
++ ../glib/gregex.h ../glib/gscanner.h ../glib/gsequence.h ../glib/gshell.h \
++ ../glib/gspawn.h ../glib/gstrfuncs.h ../glib/gtestutils.h glib.h \
++ ../glib/gthreadpool.h ../glib/gtimer.h ../glib/gtree.h \
++ ../glib/gurifuncs.h glibintl.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/libintl.h \
++ galias.h galiasdef.c
++
++../config.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/string.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/features.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/predefs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/cdefs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/wordsize.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/gnu/stubs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stddef.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/xlocale.h:
++
++../glibconfig.h:
++
++../glib/gmacros.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/syslimits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/local_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/float.h:
++
++gchecksum.h:
++
++../glib/gtypes.h:
++
++glib.h:
++
++../glib/galloca.h:
++
++../glib/garray.h:
++
++../glib/gasyncqueue.h:
++
++../glib/gthread.h:
++
++../glib/gerror.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stdarg.h:
++
++../glib/gquark.h:
++
++../glib/gutils.h:
++
++../glib/gatomic.h:
++
++../glib/gbacktrace.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/signal.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigset.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/types.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/typesizes.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/signum.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/time.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/siginfo.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigaction.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigcontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/asm/sigcontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigstack.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/ucontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/endian.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/endian.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/byteswap.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigthread.h:
++
++../glib/gbase64.h:
++
++../glib/gbookmarkfile.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/time.h:
++
++../glib/gcache.h:
++
++../glib/glist.h:
++
++../glib/gmem.h:
++
++../glib/gslice.h:
++
++../glib/gchecksum.h:
++
++../glib/gcompletion.h:
++
++../glib/gconvert.h:
++
++../glib/gdataset.h:
++
++../glib/gdate.h:
++
++../glib/gdir.h:
++
++../glib/gfileutils.h:
++
++../glib/ghash.h:
++
++../glib/ghook.h:
++
++../glib/ghostutils.h:
++
++../glib/giochannel.h:
++
++../glib/gmain.h:
++
++../glib/gpoll.h:
++
++../glib/gslist.h:
++
++../glib/gstring.h:
++
++../glib/gunicode.h:
++
++../glib/gkeyfile.h:
++
++../glib/gmappedfile.h:
++
++../glib/gmarkup.h:
++
++../glib/gmessages.h:
++
++../glib/gnode.h:
++
++../glib/goption.h:
++
++../glib/gpattern.h:
++
++../glib/gprimes.h:
++
++../glib/gqsort.h:
++
++../glib/gqueue.h:
++
++../glib/grand.h:
++
++../glib/grel.h:
++
++../glib/gregex.h:
++
++../glib/gscanner.h:
++
++../glib/gsequence.h:
++
++../glib/gshell.h:
++
++../glib/gspawn.h:
++
++../glib/gstrfuncs.h:
++
++../glib/gtestutils.h:
++
++glib.h:
++
++../glib/gthreadpool.h:
++
++../glib/gtimer.h:
++
++../glib/gtree.h:
++
++../glib/gurifuncs.h:
++
++glibintl.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/libintl.h:
++
++galias.h:
++
++galiasdef.c:
+diff -ru glib-2.22.0.ori/glib/.deps/gcompletion.Plo glib-2.22.0/glib/.deps/gcompletion.Plo
+--- glib-2.22.0.ori/glib/.deps/gcompletion.Plo	2015-08-13 20:54:31.158093198 +0200
++++ glib-2.22.0/glib/.deps/gcompletion.Plo	2015-08-13 21:07:46.486065662 +0200
+@@ -1 +1,249 @@
+-# dummy
++gcompletion.lo: gcompletion.c ../config.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/string.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/features.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/predefs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/cdefs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/wordsize.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/gnu/stubs.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stddef.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/xlocale.h \
++ glib.h ../glib/galloca.h ../glib/gtypes.h ../glibconfig.h \
++ ../glib/gmacros.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/syslimits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/local_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/limits.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/float.h \
++ ../glib/garray.h ../glib/gasyncqueue.h ../glib/gthread.h \
++ ../glib/gerror.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stdarg.h \
++ ../glib/gquark.h ../glib/gutils.h ../glib/gatomic.h ../glib/gbacktrace.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/signal.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigset.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/types.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/typesizes.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/signum.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/time.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/siginfo.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigaction.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigcontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/asm/sigcontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigstack.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/ucontext.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/endian.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/endian.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/byteswap.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigthread.h \
++ ../glib/gbase64.h ../glib/gbookmarkfile.h \
++ /home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/time.h \
++ ../glib/gcache.h ../glib/glist.h ../glib/gmem.h ../glib/gslice.h \
++ ../glib/gchecksum.h ../glib/gcompletion.h ../glib/gconvert.h \
++ ../glib/gdataset.h ../glib/gdate.h ../glib/gdir.h ../glib/gfileutils.h \
++ ../glib/ghash.h ../glib/ghook.h ../glib/ghostutils.h \
++ ../glib/giochannel.h ../glib/gmain.h ../glib/gpoll.h ../glib/gslist.h \
++ ../glib/gstring.h ../glib/gunicode.h ../glib/gkeyfile.h \
++ ../glib/gmappedfile.h ../glib/gmarkup.h ../glib/gmessages.h \
++ ../glib/gnode.h ../glib/goption.h ../glib/gpattern.h ../glib/gprimes.h \
++ ../glib/gqsort.h ../glib/gqueue.h ../glib/grand.h ../glib/grel.h \
++ ../glib/gregex.h ../glib/gscanner.h ../glib/gsequence.h ../glib/gshell.h \
++ ../glib/gspawn.h ../glib/gstrfuncs.h ../glib/gtestutils.h glib.h \
++ ../glib/gthreadpool.h ../glib/gtimer.h ../glib/gtree.h \
++ ../glib/gurifuncs.h galias.h galiasdef.c
++
++../config.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/string.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/features.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/predefs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/cdefs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/wordsize.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/gnu/stubs.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stddef.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/xlocale.h:
++
++glib.h:
++
++../glib/galloca.h:
++
++../glib/gtypes.h:
++
++../glibconfig.h:
++
++../glib/gmacros.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include-fixed/syslimits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix1_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/local_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/linux/limits.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/posix2_lim.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/float.h:
++
++../glib/garray.h:
++
++../glib/gasyncqueue.h:
++
++../glib/gthread.h:
++
++../glib/gerror.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/lib/gcc/arm-linux-gnueabihf/4.8.1/include/stdarg.h:
++
++../glib/gquark.h:
++
++../glib/gutils.h:
++
++../glib/gatomic.h:
++
++../glib/gbacktrace.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/signal.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigset.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/types.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/typesizes.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/signum.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/time.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/siginfo.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigaction.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigcontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/asm/sigcontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigstack.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/sys/ucontext.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/pthreadtypes.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/endian.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/endian.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/byteswap.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/sigthread.h:
++
++../glib/gbase64.h:
++
++../glib/gbookmarkfile.h:
++
++/home/max/Prog/kobolabs/toolchain/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/arm-linux-gnueabihf/libc/usr/include/arm-linux-gnueabihf/bits/time.h:
++
++../glib/gcache.h:
++
++../glib/glist.h:
++
++../glib/gmem.h:
++
++../glib/gslice.h:
++
++../glib/gchecksum.h:
++
++../glib/gcompletion.h:
++
++../glib/gconvert.h:
++
++../glib/gdataset.h:
++
++../glib/gdate.h:
++
++../glib/gdir.h:
++
++../glib/gfileutils.h:
++
++../glib/ghash.h:
++
++../glib/ghook.h:
++
++../glib/ghostutils.h:
++
++../glib/giochannel.h:
++
++../glib/gmain.h:
++
++../glib/gpoll.h:
++
++../glib/gslist.h:
++
++../glib/gstring.h:
++
++../glib/gunicode.h:
++
++../glib/gkeyfile.h:
++
++../glib/gmappedfile.h:
++
++../glib/gmarkup.h:
++
++../glib/gmessages.h:
++
++../glib/gnode.h:
++
++../glib/goption.h:
++
++../glib/gpattern.h:
++
++../glib/gprimes.h:
++
++../glib/gqsort.h:
++
++../glib/gqueue.h:
++
++../glib/grand.h:
++
++../glib/grel.h:
++
++../glib/gregex.h:
++
++../glib/gscanner.h:
++
++../glib/gsequence.h:
++
++../glib/gshell.h:
++
++../glib/gspawn.h:
++
++../glib/gstrfuncs.h:
++
++../glib/gtestutils.h:
++
++glib.h:
++
++../glib/gthreadpool.h:
++
++../glib/gtimer.h:
++
++../glib/gtree.h:
++
++../glib/gurifuncs.h:
++
++galias.h:
++
++galiasdef.c:
+diff -ru glib-2.22.0.ori/glib/galiasdef.c glib-2.22.0/glib/galiasdef.c
+--- glib-2.22.0.ori/glib/galiasdef.c	2015-08-13 20:54:31.166093198 +0200
++++ glib-2.22.0/glib/galiasdef.c	2015-08-13 21:05:19.754070742 +0200
+@@ -231,12 +231,12 @@
+ #undef g_atomic_int_compare_and_exchange 
+ extern __typeof (g_atomic_int_compare_and_exchange) g_atomic_int_compare_and_exchange __attribute((alias("IA__g_atomic_int_compare_and_exchange"), visibility("default")));
+ 
++#undef g_atomic_int_dec_and_test 
++extern __typeof (g_atomic_int_dec_and_test) g_atomic_int_dec_and_test __attribute((alias("IA__g_atomic_int_dec_and_test"), visibility("default")));
++
+ #undef g_atomic_int_exchange_and_add 
+ extern __typeof (g_atomic_int_exchange_and_add) g_atomic_int_exchange_and_add __attribute((alias("IA__g_atomic_int_exchange_and_add"), visibility("default")));
+ 
+-#undef g_atomic_pointer_compare_and_exchange 
+-extern __typeof (g_atomic_pointer_compare_and_exchange) g_atomic_pointer_compare_and_exchange __attribute((alias("IA__g_atomic_pointer_compare_and_exchange"), visibility("default")));
+-
+ #endif
+ #endif
+ #if IN_HEADER(__G_BACKTRACE_H__)
+diff -ru glib-2.22.0.ori/glib/galias.h glib-2.22.0/glib/galias.h
+--- glib-2.22.0.ori/glib/galias.h	2015-08-13 20:54:31.162093198 +0200
++++ glib-2.22.0/glib/galias.h	2015-08-13 21:07:38.194065949 +0200
+@@ -220,22 +220,7 @@
+ #endif
+ #endif
+ #endif
+-#if IN_HEADER(__G_ATOMIC_H__)
+-#if IN_FILE(__G_ATOMIC_C__)
+-extern __typeof (g_atomic_int_add) IA__g_atomic_int_add __attribute((visibility("hidden")));
+-#define g_atomic_int_add IA__g_atomic_int_add
+ 
+-extern __typeof (g_atomic_int_compare_and_exchange) IA__g_atomic_int_compare_and_exchange __attribute((visibility("hidden")));
+-#define g_atomic_int_compare_and_exchange IA__g_atomic_int_compare_and_exchange
+-
+-extern __typeof (g_atomic_int_exchange_and_add) IA__g_atomic_int_exchange_and_add __attribute((visibility("hidden")));
+-#define g_atomic_int_exchange_and_add IA__g_atomic_int_exchange_and_add
+-
+-extern __typeof (g_atomic_pointer_compare_and_exchange) IA__g_atomic_pointer_compare_and_exchange __attribute((visibility("hidden")));
+-#define g_atomic_pointer_compare_and_exchange IA__g_atomic_pointer_compare_and_exchange
+-
+-#endif
+-#endif
+ #if IN_HEADER(__G_BACKTRACE_H__)
+ #if IN_FILE(__G_BACKTRACE_C__)
+ extern __typeof (g_on_error_query) IA__g_on_error_query __attribute((visibility("hidden")));
+diff -ru glib-2.22.0.ori/glib/gatomic.c glib-2.22.0/glib/gatomic.c
+--- glib-2.22.0.ori/glib/gatomic.c	2015-08-13 20:54:31.154093199 +0200
++++ glib-2.22.0/glib/gatomic.c	2015-08-13 20:58:28.606084977 +0200
+@@ -1,1058 +1,803 @@
+-/* GLIB - Library of useful routines for C programming
+- * Copyright (C) 1995-1997  Peter Mattis, Spencer Kimball and Josh MacDonald
++/*
++ * Copyright © 2011 Ryan Lortie
+  *
+- * g_atomic_*: atomic operations.
+- * Copyright (C) 2003 Sebastian Wilhelmi
+- * Copyright (C) 2007 Nokia Corporation
+- *
+- * This library is free software; you can redistribute it and/or
+- * modify it under the terms of the GNU Lesser General Public
+- * License as published by the Free Software Foundation; either
+- * version 2 of the License, or (at your option) any later version.
++ * This library is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU Lesser General Public License as
++ * published by the Free Software Foundation; either version 2 of the
++ * licence, or (at your option) any later version.
+  *
+- * This library is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * This library is distributed in the hope that it will be useful, but
++ * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  * Lesser General Public License for more details.
+  *
+  * You should have received a copy of the GNU Lesser General Public
+- * License along with this library; if not, write to the
+- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+- * Boston, MA 02111-1307, USA.
++ * License along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307,
++ * USA.
++ *
++ * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+ #include "config.h"
+ 
+-#if defined (G_ATOMIC_ARM)
+-#include <sched.h>
++#include "gatomic.h"
++
++/**
++ * SECTION:atomic_operations
++ * @title: Atomic Operations
++ * @short_description: basic atomic integer and pointer operations
++ * @see_also: #GMutex
++ *
++ * The following is a collection of compiler macros to provide atomic
++ * access to integer and pointer-sized values.
++ *
++ * The macros that have 'int' in the name will operate on pointers to
++ * #gint and #guint.  The macros with 'pointer' in the name will operate
++ * on pointers to any pointer-sized value, including #gsize.  There is
++ * no support for 64bit operations on platforms with 32bit pointers
++ * because it is not generally possible to perform these operations
++ * atomically.
++ *
++ * The get, set and exchange operations for integers and pointers
++ * nominally operate on #gint and #gpointer, respectively.  Of the
++ * arithmetic operations, the 'add' operation operates on (and returns)
++ * signed integer values (#gint and #gssize) and the 'and', 'or', and
++ * 'xor' operations operate on (and return) unsigned integer values
++ * (#guint and #gsize).
++ *
++ * All of the operations act as a full compiler and (where appropriate)
++ * hardware memory barrier.  Acquire and release or producer and
++ * consumer barrier semantics are not available through this API.
++ *
++ * On GCC, these macros are implemented using GCC intrinsic operations.
++ * On non-GCC compilers they will evaluate to function calls to
++ * functions implemented by GLib.
++ *
++ * If GLib itself was compiled with GCC then these functions will again
++ * be implemented by the GCC intrinsics.  On Windows without GCC, the
++ * interlocked API is used to implement the functions.
++ *
++ * With non-GCC compilers on non-Windows systems, the functions are
++ * currently incapable of implementing true atomic operations --
++ * instead, they fallback to holding a global lock while performing the
++ * operation.  This provides atomicity between the threads of one
++ * process, but not between separate processes.  For this reason, one
++ * should exercise caution when attempting to use these options on
++ * shared memory regions.
++ *
++ * It is very important that all accesses to a particular integer or
++ * pointer be performed using only this API and that different sizes of
++ * operation are not mixed or used on overlapping memory regions.  Never
++ * read or assign directly from or to a value -- always use this API.
++ *
++ * For simple reference counting purposes you should use
++ * g_atomic_int_inc() and g_atomic_int_dec_and_test().  Other uses that
++ * fall outside of simple reference counting patterns are prone to
++ * subtle bugs and occasionally undefined behaviour.  It is also worth
++ * noting that since all of these operations require global
++ * synchronisation of the entire machine, they can be quite slow.  In
++ * the case of performing multiple atomic operations it can often be
++ * faster to simply acquire a mutex lock around the critical area,
++ * perform the operations normally and then release the lock.
++ **/
++
++#ifdef G_ATOMIC_OP_USE_GCC_BUILTINS
++
++#ifndef __GNUC__
++#error Using GCC builtin atomic ops, but not compiling with GCC?
+ #endif
+ 
+-#include "glib.h"
+-#include "gthreadprivate.h"
+-#include "galias.h"
+-
+-#if defined (__GNUC__)
+-# if defined (G_ATOMIC_I486)
+-/* Adapted from CVS version 1.10 of glibc's sysdeps/i386/i486/bits/atomic.h 
+- */
++/**
++ * g_atomic_int_get:
++ * @atomic: a pointer to a #gint or #guint
++ *
++ * Gets the current value of @atomic.
++ *
++ * This call acts as a full compiler and hardware memory barrier (before
++ * the get).
++ *
++ * Returns: the value of the integer
++ *
++ * Since: 2.4
++ **/
+ gint
+-g_atomic_int_exchange_and_add (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-			       gint           val)
++(g_atomic_int_get) (volatile gint *atomic)
+ {
+-  gint result;
+-
+-  __asm__ __volatile__ ("lock; xaddl %0,%1"
+-                        : "=r" (result), "=m" (*atomic) 
+-			: "0" (val), "m" (*atomic));
+-  return result;
++  return g_atomic_int_get (atomic);
+ }
+- 
++
++/**
++ * g_atomic_int_set:
++ * @atomic: a pointer to a #gint or #guint
++ * @newval: a new value to store
++ *
++ * Sets the value of @atomic to @newval.
++ *
++ * This call acts as a full compiler and hardware memory barrier (after
++ * the set).
++ *
++ * Since: 2.4
++ **/
+ void
+-g_atomic_int_add (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-		  gint           val)
++(g_atomic_int_set) (volatile gint *atomic,
++                    gint           newval)
+ {
+-  __asm__ __volatile__ ("lock; addl %1,%0"
+-			: "=m" (*atomic) 
+-			: "ir" (val), "m" (*atomic));
++  g_atomic_int_set (atomic, newval);
+ }
+ 
+-gboolean
+-g_atomic_int_compare_and_exchange (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-				   gint           oldval, 
+-				   gint           newval)
+-{
+-  gint result;
+- 
+-  __asm__ __volatile__ ("lock; cmpxchgl %2, %1"
+-			: "=a" (result), "=m" (*atomic)
+-			: "r" (newval), "m" (*atomic), "0" (oldval)); 
+-
+-  return result == oldval;
+-}
+-
+-/* The same code as above, as on i386 gpointer is 32 bit as well.
+- * Duplicating the code here seems more natural than casting the
+- * arguments and calling the former function */
+-
+-gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic, 
+-				       gpointer           oldval, 
+-				       gpointer           newval)
++/**
++ * g_atomic_int_inc:
++ * @atomic: a pointer to a #gint or #guint
++ *
++ * Increments the value of @atomic by 1.
++ *
++ * This call acts as a full compiler and hardware memory barrier.
++ *
++ * Since: 2.4
++ **/
++void
++(g_atomic_int_inc) (volatile gint *atomic)
+ {
+-  gpointer result;
+- 
+-  __asm__ __volatile__ ("lock; cmpxchgl %2, %1"
+-			: "=a" (result), "=m" (*atomic)
+-			: "r" (newval), "m" (*atomic), "0" (oldval)); 
+-
+-  return result == oldval;
++  g_atomic_int_inc (atomic);
+ }
+ 
+-# elif defined (G_ATOMIC_SPARCV9)
+-/* Adapted from CVS version 1.3 of glibc's sysdeps/sparc/sparc64/bits/atomic.h
+- */
+-#  define ATOMIC_INT_CMP_XCHG(atomic, oldval, newval)			\
+-  ({ 									\
+-     gint __result;							\
+-     __asm__ __volatile__ ("cas [%4], %2, %0"				\
+-                           : "=r" (__result), "=m" (*(atomic))		\
+-                           : "r" (oldval), "m" (*(atomic)), "r" (atomic),\
+-                           "0" (newval));				\
+-     __result == oldval;						\
+-  })
+-
+-#  if GLIB_SIZEOF_VOID_P == 4 /* 32-bit system */
++/**
++ * g_atomic_int_dec_and_test:
++ * @atomic: a pointer to a #gint or #guint
++ *
++ * Decrements the value of @atomic by 1.
++ *
++ * This call acts as a full compiler and hardware memory barrier.
++ *
++ * Returns: %TRUE if the resultant value is zero
++ *
++ * Since: 2.4
++ **/
+ gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic, 
+-				       gpointer           oldval, 
+-				       gpointer           newval)
+-{
+-  gpointer result;
+-  __asm__ __volatile__ ("cas [%4], %2, %0"
+-			: "=r" (result), "=m" (*atomic)
+-			: "r" (oldval), "m" (*atomic), "r" (atomic),
+-			"0" (newval));
+-  return result == oldval;
++(g_atomic_int_dec_and_test) (volatile gint *atomic)
++{
++  return g_atomic_int_dec_and_test (atomic);
+ }
+-#  elif GLIB_SIZEOF_VOID_P == 8 /* 64-bit system */
+-gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic, 
+-				       gpointer           oldval, 
+-				       gpointer           newval)
+-{
+-  gpointer result;
+-  gpointer *a = atomic;
+-  __asm__ __volatile__ ("casx [%4], %2, %0"
+-			: "=r" (result), "=m" (*a)
+-			: "r" (oldval), "m" (*a), "r" (a),
+-			"0" (newval));
+-  return result == oldval;
+-}
+-#  else /* What's that */
+-#    error "Your system has an unsupported pointer size"
+-#  endif /* GLIB_SIZEOF_VOID_P */
+-#  define G_ATOMIC_MEMORY_BARRIER					\
+-  __asm__ __volatile__ ("membar #LoadLoad | #LoadStore"			\
+-                        " | #StoreLoad | #StoreStore" : : : "memory")
+ 
+-# elif defined (G_ATOMIC_ALPHA)
+-/* Adapted from CVS version 1.3 of glibc's sysdeps/alpha/bits/atomic.h
+- */
+-#  define ATOMIC_INT_CMP_XCHG(atomic, oldval, newval)			\
+-  ({ 									\
+-     gint __result;							\
+-     gint __prev;							\
+-     __asm__ __volatile__ (						\
+-        "       mb\n"							\
+-        "1:     ldl_l   %0,%2\n"					\
+-        "       cmpeq   %0,%3,%1\n"					\
+-        "       beq     %1,2f\n"					\
+-        "       mov     %4,%1\n"					\
+-        "       stl_c   %1,%2\n"					\
+-        "       beq     %1,1b\n"					\
+-        "       mb\n"							\
+-        "2:"								\
+-        : "=&r" (__prev), 						\
+-          "=&r" (__result)						\
+-        : "m" (*(atomic)),						\
+-          "Ir" (oldval),						\
+-          "Ir" (newval)							\
+-        : "memory");							\
+-     __result != 0;							\
+-  })
+-#  if GLIB_SIZEOF_VOID_P == 4 /* 32-bit system */
+-gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic, 
+-				       gpointer           oldval, 
+-				       gpointer           newval)
+-{
+-  gint result;
+-  gpointer prev;
+-  __asm__ __volatile__ (
+-        "       mb\n"
+-        "1:     ldl_l   %0,%2\n"
+-        "       cmpeq   %0,%3,%1\n"
+-        "       beq     %1,2f\n"
+-        "       mov     %4,%1\n"
+-        "       stl_c   %1,%2\n"
+-        "       beq     %1,1b\n"
+-        "       mb\n"
+-        "2:"
+-        : "=&r" (prev), 
+-          "=&r" (result)
+-        : "m" (*atomic),
+-          "Ir" (oldval),
+-          "Ir" (newval)
+-        : "memory");
+-  return result != 0;
+-}
+-#  elif GLIB_SIZEOF_VOID_P == 8 /* 64-bit system */
++/**
++ * g_atomic_int_compare_and_exchange:
++ * @atomic: a pointer to a #gint or #guint
++ * @oldval: the value to compare with
++ * @newval: the value to conditionally replace with
++ *
++ * Compares @atomic to @oldval and, if equal, sets it to @newval.  If
++ * @atomic was not equal to @oldval then no change occurs.
++ *
++ * This compare and exchange is done atomically.
++ *
++ * This call acts as a full compiler and hardware memory barrier.
++ *
++ * Returns: %TRUE if the exchange took place
++ *
++ * Since: 2.4
++ **/
+ gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic, 
+-				       gpointer           oldval, 
+-				       gpointer           newval)
+-{
+-  gint result;
+-  gpointer prev;
+-  __asm__ __volatile__ (
+-        "       mb\n"
+-        "1:     ldq_l   %0,%2\n"
+-        "       cmpeq   %0,%3,%1\n"
+-        "       beq     %1,2f\n"
+-        "       mov     %4,%1\n"
+-        "       stq_c   %1,%2\n"
+-        "       beq     %1,1b\n"
+-        "       mb\n"
+-        "2:"
+-        : "=&r" (prev), 
+-          "=&r" (result)
+-        : "m" (*atomic),
+-          "Ir" (oldval),
+-          "Ir" (newval)
+-        : "memory");
+-  return result != 0;
+-}
+-#  else /* What's that */
+-#   error "Your system has an unsupported pointer size"
+-#  endif /* GLIB_SIZEOF_VOID_P */
+-#  define G_ATOMIC_MEMORY_BARRIER  __asm__ ("mb" : : : "memory")
+-# elif defined (G_ATOMIC_X86_64)
+-/* Adapted from CVS version 1.9 of glibc's sysdeps/x86_64/bits/atomic.h 
+- */
+-gint
+-g_atomic_int_exchange_and_add (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-			       gint           val)
++(g_atomic_int_compare_and_exchange) (volatile gint *atomic,
++                                     gint           oldval,
++                                     gint           newval)
+ {
+-  gint result;
+-
+-  __asm__ __volatile__ ("lock; xaddl %0,%1"
+-                        : "=r" (result), "=m" (*atomic) 
+-			: "0" (val), "m" (*atomic));
+-  return result;
++  return g_atomic_int_compare_and_exchange (atomic, oldval, newval);
+ }
+- 
+-void
+-g_atomic_int_add (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-		  gint           val)
++
++/**
++ * g_atomic_int_add:
++ * @atomic: a pointer to a #gint or #guint
++ * @val: the value to add
++ *
++ * Atomically adds @val to the value of @atomic.
++ *
++ * This call acts as a full compiler and hardware memory barrier.
++ *
++ * Returns: the value of @atomic before the add, signed
++ *
++ * Since: 2.4
++ **/
++gint
++(g_atomic_int_add) (volatile gint *atomic,
++                    gint           val)
+ {
+-  __asm__ __volatile__ ("lock; addl %1,%0"
+-			: "=m" (*atomic) 
+-			: "ir" (val), "m" (*atomic));
++  return g_atomic_int_add (atomic, val);
+ }
+ 
+-gboolean
+-g_atomic_int_compare_and_exchange (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-				   gint           oldval, 
+-				   gint           newval)
+-{
+-  gint result;
+- 
+-  __asm__ __volatile__ ("lock; cmpxchgl %2, %1"
+-			: "=a" (result), "=m" (*atomic)
+-			: "r" (newval), "m" (*atomic), "0" (oldval)); 
++/**
++ * g_atomic_int_and:
++ * @atomic: a pointer to a #gint or #guint
++ * @val: the value to 'and'
++ *
++ * Performs an atomic bitwise 'and' of the value of @atomic and @val,
++ * storing the result back in @atomic.
++ *
++ * This call acts as a full compiler and hardware memory barrier.
++ *
++ * Returns: the value of @atomic before the operation, unsigned
++ *
++ * Since: 2.30
++ **/
++guint
++(g_atomic_int_and) (volatile guint *atomic,
++                    guint           val)
++{
++  return g_atomic_int_and (atomic, val);
++}
+ 
+-  return result == oldval;
++/**
++ * g_atomic_int_or:
++ * @atomic: a pointer to a #gint or #guint
++ * @val: the value to 'or'
++ *
++ * Performs an atomic bitwise 'or' of the value of @atomic and @val,
++ * storing the result back in @atomic.
++ *
++ * This call acts as a full compiler and hardware memory barrier.
++ *
++ * Returns: the value of @atomic before the operation, unsigned
++ *
++ * Since: 2.30
++ **/
++guint
++(g_atomic_int_or) (volatile guint *atomic,
++                   guint           val)
++{
++  return g_atomic_int_or (atomic, val);
+ }
+ 
+-gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic, 
+-				       gpointer           oldval, 
+-				       gpointer           newval)
+-{
+-  gpointer result;
+- 
+-  __asm__ __volatile__ ("lock; cmpxchgq %q2, %1"
+-			: "=a" (result), "=m" (*atomic)
+-			: "r" (newval), "m" (*atomic), "0" (oldval)); 
+-
+-  return result == oldval;
+-}
+-
+-# elif defined (G_ATOMIC_POWERPC)
+-/* Adapted from CVS version 1.16 of glibc's sysdeps/powerpc/bits/atomic.h 
+- * and CVS version 1.4 of glibc's sysdeps/powerpc/powerpc32/bits/atomic.h 
+- * and CVS version 1.7 of glibc's sysdeps/powerpc/powerpc64/bits/atomic.h 
+- */
+-#   ifdef __OPTIMIZE__
+-/* Non-optimizing compile bails on the following two asm statements
+- * for reasons unknown to the author */
+-gint
+-g_atomic_int_exchange_and_add (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-			       gint           val)
++/**
++ * g_atomic_int_xor:
++ * @atomic: a pointer to a #gint or #guint
++ * @val: the value to 'xor'
++ *
++ * Performs an atomic bitwise 'xor' of the value of @atomic and @val,
++ * storing the result back in @atomic.
++ *
++ * This call acts as a full compiler and hardware memory barrier.
++ *
++ * Returns: the value of @atomic before the operation, unsigned
++ *
++ * Since: 2.30
++ **/
++guint
++(g_atomic_int_xor) (volatile guint *atomic,
++                    guint           val)
+ {
+-  gint result, temp;
+-#if ASM_NUMERIC_LABELS
+-  __asm__ __volatile__ ("1:       lwarx   %0,0,%3\n"
+-			"         add     %1,%0,%4\n"
+-			"         stwcx.  %1,0,%3\n"
+-			"         bne-    1b"
+-			: "=&b" (result), "=&r" (temp), "=m" (*atomic)
+-			: "b" (atomic), "r" (val), "m" (*atomic)
+-			: "cr0", "memory");
+-#else
+-  __asm__ __volatile__ (".Lieaa%=:       lwarx   %0,0,%3\n"
+-			"         add     %1,%0,%4\n"
+-			"         stwcx.  %1,0,%3\n"
+-			"         bne-    .Lieaa%="
+-			: "=&b" (result), "=&r" (temp), "=m" (*atomic)
+-			: "b" (atomic), "r" (val), "m" (*atomic)
+-			: "cr0", "memory");
+-#endif
+-  return result;
++  return g_atomic_int_xor (atomic, val);
+ }
+- 
+-/* The same as above, to save a function call repeated here */
+-void
+-g_atomic_int_add (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-		  gint           val)
++
++
++/**
++ * g_atomic_pointer_get:
++ * @atomic: a pointer to a #gpointer-sized value
++ *
++ * Gets the current value of @atomic.
++ *
++ * This call acts as a full compiler and hardware memory barrier (before
++ * the get).
++ *
++ * Returns: the value of the pointer
++ *
++ * Since: 2.4
++ **/
++gpointer
++(g_atomic_pointer_get) (volatile void *atomic)
+ {
+-  gint result, temp;  
+-#if ASM_NUMERIC_LABELS
+-  __asm__ __volatile__ ("1:       lwarx   %0,0,%3\n"
+-			"         add     %1,%0,%4\n"
+-			"         stwcx.  %1,0,%3\n"
+-			"         bne-    1b"
+-			: "=&b" (result), "=&r" (temp), "=m" (*atomic)
+-			: "b" (atomic), "r" (val), "m" (*atomic)
+-			: "cr0", "memory");
+-#else
+-  __asm__ __volatile__ (".Lia%=:       lwarx   %0,0,%3\n"
+-			"         add     %1,%0,%4\n"
+-			"         stwcx.  %1,0,%3\n"
+-			"         bne-    .Lia%="
+-			: "=&b" (result), "=&r" (temp), "=m" (*atomic)
+-			: "b" (atomic), "r" (val), "m" (*atomic)
+-			: "cr0", "memory");
+-#endif
++  return g_atomic_pointer_get ((volatile gpointer *) atomic);
+ }
+-#   else /* !__OPTIMIZE__ */
+-gint
+-g_atomic_int_exchange_and_add (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-			       gint           val)
+-{
+-  gint result;
+-  do
+-    result = *atomic;
+-  while (!g_atomic_int_compare_and_exchange (atomic, result, result + val));
+ 
+-  return result;
+-}
+- 
++/**
++ * g_atomic_pointer_set:
++ * @atomic: a pointer to a #gpointer-sized value
++ * @newval: a new value to store
++ *
++ * Sets the value of @atomic to @newval.
++ *
++ * This call acts as a full compiler and hardware memory barrier (after
++ * the set).
++ *
++ * Since: 2.4
++ **/
+ void
+-g_atomic_int_add (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-		  gint           val)
++(g_atomic_pointer_set) (volatile void *atomic,
++                        gpointer       newval)
+ {
+-  gint result;
+-  do
+-    result = *atomic;
+-  while (!g_atomic_int_compare_and_exchange (atomic, result, result + val));
++  g_atomic_pointer_set ((volatile gpointer *) atomic, newval);
+ }
+-#   endif /* !__OPTIMIZE__ */
+ 
+-#   if GLIB_SIZEOF_VOID_P == 4 /* 32-bit system */
++/**
++ * g_atomic_pointer_compare_and_exchange:
++ * @atomic: a pointer to a #gpointer-sized value
++ * @oldval: the value to compare with
++ * @newval: the value to conditionally replace with
++ *
++ * Compares @atomic to @oldval and, if equal, sets it to @newval.  If
++ * @atomic was not equal to @oldval then no change occurs.
++ *
++ * This compare and exchange is done atomically.
++ *
++ * This call acts as a full compiler and hardware memory barrier.
++ *
++ * Returns: %TRUE if the exchange took place
++ *
++ * Since: 2.4
++ **/
+ gboolean
+-g_atomic_int_compare_and_exchange (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-				   gint           oldval, 
+-				   gint           newval)
+-{
+-  gint result;
+-#if ASM_NUMERIC_LABELS
+-  __asm__ __volatile__ ("sync\n"
+-			"1: lwarx   %0,0,%1\n"
+-			"   subf.   %0,%2,%0\n"
+-			"   bne     2f\n"
+-			"   stwcx.  %3,0,%1\n"
+-			"   bne-    1b\n"
+-			"2: isync"
+-			: "=&r" (result)
+-			: "b" (atomic), "r" (oldval), "r" (newval)
+-			: "cr0", "memory"); 
+-#else
+-  __asm__ __volatile__ ("sync\n"
+-			".L1icae%=: lwarx   %0,0,%1\n"
+-			"   subf.   %0,%2,%0\n"
+-			"   bne     .L2icae%=\n"
+-			"   stwcx.  %3,0,%1\n"
+-			"   bne-    .L1icae%=\n"
+-			".L2icae%=: isync"
+-			: "=&r" (result)
+-			: "b" (atomic), "r" (oldval), "r" (newval)
+-			: "cr0", "memory"); 
+-#endif
+-  return result == 0;
++(g_atomic_pointer_compare_and_exchange) (volatile void *atomic,
++                                         gpointer       oldval,
++                                         gpointer       newval)
++{
++  return g_atomic_pointer_compare_and_exchange ((volatile gpointer *) atomic,
++                                                oldval, newval);
+ }
+ 
+-gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic, 
+-				       gpointer           oldval, 
+-				       gpointer           newval)
+-{
+-  gpointer result;
+-#if ASM_NUMERIC_LABELS
+-  __asm__ __volatile__ ("sync\n"
+-			"1: lwarx   %0,0,%1\n"
+-			"   subf.   %0,%2,%0\n"
+-			"   bne     2f\n"
+-			"   stwcx.  %3,0,%1\n"
+-			"   bne-    1b\n"
+-			"2: isync"
+-			: "=&r" (result)
+-			: "b" (atomic), "r" (oldval), "r" (newval)
+-			: "cr0", "memory"); 
+-#else
+-  __asm__ __volatile__ ("sync\n"
+-			".L1pcae%=: lwarx   %0,0,%1\n"
+-			"   subf.   %0,%2,%0\n"
+-			"   bne     .L2pcae%=\n"
+-			"   stwcx.  %3,0,%1\n"
+-			"   bne-    .L1pcae%=\n"
+-			".L2pcae%=: isync"
+-			: "=&r" (result)
+-			: "b" (atomic), "r" (oldval), "r" (newval)
+-			: "cr0", "memory"); 
+-#endif
+-  return result == 0;
++/**
++ * g_atomic_pointer_add:
++ * @atomic: a pointer to a #gpointer-sized value
++ * @val: the value to add
++ *
++ * Atomically adds @val to the value of @atomic.
++ *
++ * This call acts as a full compiler and hardware memory barrier.
++ *
++ * Returns: the value of @atomic before the add, signed
++ *
++ * Since: 2.30
++ **/
++gssize
++(g_atomic_pointer_add) (volatile void *atomic,
++                        gssize         val)
++{
++  return g_atomic_pointer_add ((volatile gpointer *) atomic, val);
+ }
+-#   elif GLIB_SIZEOF_VOID_P == 8 /* 64-bit system */
+-gboolean
+-g_atomic_int_compare_and_exchange (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-				   gint           oldval, 
+-				   gint           newval)
+-{
+-  gpointer result;
+-#if ASM_NUMERIC_LABELS
+-  __asm__ __volatile__ ("sync\n"
+-			"1: lwarx   %0,0,%1\n"
+-			"   extsw   %0,%0\n"
+-			"   subf.   %0,%2,%0\n"
+-			"   bne     2f\n"
+-			"   stwcx.  %3,0,%1\n"
+-			"   bne-    1b\n"
+-			"2: isync"
+-			: "=&r" (result)
+-			: "b" (atomic), "r" (oldval), "r" (newval)
+-			: "cr0", "memory"); 
+-#else
+-  __asm__ __volatile__ ("sync\n"
+-			".L1icae%=: lwarx   %0,0,%1\n"
+-			"   extsw   %0,%0\n"
+-			"   subf.   %0,%2,%0\n"
+-			"   bne     .L2icae%=\n"
+-			"   stwcx.  %3,0,%1\n"
+-			"   bne-    .L1icae%=\n"
+-			".L2icae%=: isync"
+-			: "=&r" (result)
+-			: "b" (atomic), "r" (oldval), "r" (newval)
+-			: "cr0", "memory"); 
+-#endif
+-  return result == 0;
++
++/**
++ * g_atomic_pointer_and:
++ * @atomic: a pointer to a #gpointer-sized value
++ * @val: the value to 'and'
++ *
++ * Performs an atomic bitwise 'and' of the value of @atomic and @val,
++ * storing the result back in @atomic.
++ *
++ * This call acts as a full compiler and hardware memory barrier.
++ *
++ * Returns: the value of @atomic before the operation, unsigned
++ *
++ * Since: 2.30
++ **/
++gsize
++(g_atomic_pointer_and) (volatile void *atomic,
++                        gsize          val)
++{
++  return g_atomic_pointer_and ((volatile gpointer *) atomic, val);
+ }
+ 
+-gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic, 
+-				       gpointer           oldval, 
+-				       gpointer           newval)
+-{
+-  gpointer result;
+-#if ASM_NUMERIC_LABELS
+-  __asm__ __volatile__ ("sync\n"
+-			"1: ldarx   %0,0,%1\n"
+-			"   subf.   %0,%2,%0\n"
+-			"   bne     2f\n"
+-			"   stdcx.  %3,0,%1\n"
+-			"   bne-    1b\n"
+-			"2: isync"
+-			: "=&r" (result)
+-			: "b" (atomic), "r" (oldval), "r" (newval)
+-			: "cr0", "memory"); 
+-#else
+-  __asm__ __volatile__ ("sync\n"
+-			".L1pcae%=: ldarx   %0,0,%1\n"
+-			"   subf.   %0,%2,%0\n"
+-			"   bne     .L2pcae%=\n"
+-			"   stdcx.  %3,0,%1\n"
+-			"   bne-    .L1pcae%=\n"
+-			".L2pcae%=: isync"
+-			: "=&r" (result)
+-			: "b" (atomic), "r" (oldval), "r" (newval)
+-			: "cr0", "memory"); 
+-#endif
+-  return result == 0;
++/**
++ * g_atomic_pointer_or:
++ * @atomic: a pointer to a #gpointer-sized value
++ * @val: the value to 'or'
++ *
++ * Performs an atomic bitwise 'or' of the value of @atomic and @val,
++ * storing the result back in @atomic.
++ *
++ * This call acts as a full compiler and hardware memory barrier.
++ *
++ * Returns: the value of @atomic before the operation, unsigned
++ *
++ * Since: 2.30
++ **/
++gsize
++(g_atomic_pointer_or) (volatile void *atomic,
++                       gsize          val)
++{
++  return g_atomic_pointer_or ((volatile gpointer *) atomic, val);
+ }
+-#  else /* What's that */
+-#   error "Your system has an unsupported pointer size"
+-#  endif /* GLIB_SIZEOF_VOID_P */
+ 
+-#  define G_ATOMIC_MEMORY_BARRIER __asm__ ("sync" : : : "memory")
++/**
++ * g_atomic_pointer_xor:
++ * @atomic: a pointer to a #gpointer-sized value
++ * @val: the value to 'xor'
++ *
++ * Performs an atomic bitwise 'xor' of the value of @atomic and @val,
++ * storing the result back in @atomic.
++ *
++ * This call acts as a full compiler and hardware memory barrier.
++ *
++ * Returns: the value of @atomic before the operation, unsigned
++ *
++ * Since: 2.30
++ **/
++gsize
++(g_atomic_pointer_xor) (volatile void *atomic,
++                        gsize          val)
++{
++  return g_atomic_pointer_xor ((volatile gpointer *) atomic, val);
++}
+ 
+-# elif defined (G_ATOMIC_IA64)
+-/* Adapted from CVS version 1.8 of glibc's sysdeps/ia64/bits/atomic.h
++#elif defined (G_PLATFORM_WIN32)
++
++/*
++ * http://msdn.microsoft.com/en-us/library/ms684122(v=vs.85).aspx
+  */
+ gint
+-g_atomic_int_exchange_and_add (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-			       gint           val)
++(g_atomic_int_get) (volatile gint *atomic)
+ {
+-  return __sync_fetch_and_add (atomic, val);
++  MemoryBarrier ();
++  return *atomic;
+ }
+- 
++
+ void
+-g_atomic_int_add (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-		  gint val)
++(g_atomic_int_set) (volatile gint *atomic,
++                    gint           newval)
+ {
+-  __sync_fetch_and_add (atomic, val);
++  *atomic = newval;
++  MemoryBarrier ();
+ }
+ 
+-gboolean
+-g_atomic_int_compare_and_exchange (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-				   gint           oldval, 
+-				   gint           newval)
++void
++(g_atomic_int_inc) (volatile gint *atomic)
+ {
+-  return __sync_bool_compare_and_swap (atomic, oldval, newval);
++  InterlockedIncrement (atomic);
+ }
+ 
+ gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic,
+-				       gpointer           oldval, 
+-				       gpointer           newval)
++(g_atomic_int_dec_and_test) (volatile gint *atomic)
+ {
+-  return __sync_bool_compare_and_swap ((long *)atomic, 
+-				       (long)oldval, (long)newval);
++  return InterlockedDecrement (atomic) == 0;
+ }
+ 
+-#  define G_ATOMIC_MEMORY_BARRIER __sync_synchronize ()
+-# elif defined (G_ATOMIC_S390)
+-/* Adapted from glibc's sysdeps/s390/bits/atomic.h
+- */
+-#  define ATOMIC_INT_CMP_XCHG(atomic, oldval, newval)			\
+-  ({ 									\
+-     gint __result = oldval;					\
+-     __asm__ __volatile__ ("cs %0, %2, %1"				\
+-                           : "+d" (__result), "=Q" (*(atomic))		\
+-                           : "d" (newval), "m" (*(atomic)) : "cc" );	\
+-     __result == oldval;						\
+-  })
+-
+-#  if GLIB_SIZEOF_VOID_P == 4 /* 32-bit system */
+-gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic,
+-				       gpointer           oldval,
+-				       gpointer           newval)
+-{
+-  gpointer result = oldval;
+-  __asm__ __volatile__ ("cs %0, %2, %1"
+-			: "+d" (result), "=Q" (*(atomic))
+-			: "d" (newval), "m" (*(atomic)) : "cc" );
+-  return result == oldval;
+-}
+-#  elif GLIB_SIZEOF_VOID_P == 8 /* 64-bit system */
+ gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic,
+-				       gpointer           oldval,
+-				       gpointer           newval)
++(g_atomic_int_compare_and_exchange) (volatile gint *atomic,
++                                     gint           oldval,
++                                     gint           newval)
+ {
+-  gpointer result = oldval;
+-  gpointer *a = atomic;
+-  __asm__ __volatile__ ("csg %0, %2, %1"
+-			: "+d" (result), "=Q" (*a)
+-			: "d" ((long)(newval)), "m" (*a) : "cc" );
+-  return result == oldval;
++  return InterlockedCompareExchange (atomic, newval, oldval) == oldval;
+ }
+-#  else /* What's that */
+-#    error "Your system has an unsupported pointer size"
+-#  endif /* GLIB_SIZEOF_VOID_P */
+-# elif defined (G_ATOMIC_ARM)
+-static volatile int atomic_spin = 0;
+ 
+-static int atomic_spin_trylock (void)
++gint
++(g_atomic_int_add) (volatile gint *atomic,
++                    gint           val)
+ {
+-  int result;
+-
+-  asm volatile (
+-    "swp %0, %1, [%2]\n"
+-    : "=&r,&r" (result)
+-    : "r,0" (1), "r,r" (&atomic_spin)
+-    : "memory");
+-  if (result == 0)
+-    return 0;
+-  else
+-    return -1;
++  return InterlockedExchangeAdd (atomic, val);
+ }
+ 
+-static void atomic_spin_lock (void)
++guint
++(g_atomic_int_and) (volatile guint *atomic,
++                    guint           val)
+ {
+-  while (atomic_spin_trylock())
+-    sched_yield();
++  return InterlockedAnd (atomic, val);
+ }
+ 
+-static void atomic_spin_unlock (void)
++guint
++(g_atomic_int_or) (volatile guint *atomic,
++                   guint           val)
+ {
+-  atomic_spin = 0;
++  return InterlockedOr (atomic, val);
+ }
+ 
+-gint
+-g_atomic_int_exchange_and_add (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-			       gint           val)
++guint
++(g_atomic_int_xor) (volatile guint *atomic,
++                    guint           val)
+ {
+-  gint result;
+- 
+-  atomic_spin_lock();  
+-  result = *atomic;
+-  *atomic += val;
+-  atomic_spin_unlock();
+-
+-  return result;
++  return InterlockedXor (atomic, val);
+ }
+ 
+-void
+-g_atomic_int_add (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-		  gint           val)
+-{
+-  atomic_spin_lock();
+-  *atomic += val;
+-  atomic_spin_unlock();
+-}
+ 
+-gboolean
+-g_atomic_int_compare_and_exchange (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-				   gint           oldval, 
+-				   gint           newval)
+-{
+-  gboolean result;
+-
+-  atomic_spin_lock();
+-  if (*atomic == oldval)
+-    {
+-      result = TRUE;
+-      *atomic = newval;
+-    }
+-  else
+-    result = FALSE;
+-  atomic_spin_unlock();
++gpointer
++(g_atomic_pointer_get) (volatile void *atomic)
++{
++  volatile gpointer *ptr = atomic;
+ 
+-  return result;
++  MemoryBarrier ();
++  return *ptr;
+ }
+ 
+-gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic, 
+-				       gpointer           oldval, 
+-				       gpointer           newval)
+-{
+-  gboolean result;
+- 
+-  atomic_spin_lock();
+-  if (*atomic == oldval)
+-    {
+-      result = TRUE;
+-      *atomic = newval;
+-    }
+-  else
+-    result = FALSE;
+-  atomic_spin_unlock();
+-
+-  return result;
+-}
+-# elif defined (G_ATOMIC_CRIS) || defined (G_ATOMIC_CRISV32)
+-#  ifdef G_ATOMIC_CRIS
+-#   define CRIS_ATOMIC_INT_CMP_XCHG(atomic, oldval, newval)		\
+-  ({									\
+-     gboolean __result;							\
+-     __asm__ __volatile__ ("\n"						\
+-                           "0:\tclearf\n\t"				\
+-                           "cmp.d [%[Atomic]], %[OldVal]\n\t"		\
+-                           "bne 1f\n\t"					\
+-                           "ax\n\t"					\
+-                           "move.d %[NewVal], [%[Atomic]]\n\t"		\
+-                           "bwf 0b\n"					\
+-                           "1:\tseq %[Result]"				\
+-                           : [Result] "=&r" (__result),			\
+-                                      "=m" (*(atomic))			\
+-                           : [Atomic] "r" (atomic),			\
+-                             [OldVal] "r" (oldval),			\
+-                             [NewVal] "r" (newval),			\
+-                                      "g" (*(gpointer*) (atomic))	\
+-                           : "memory");					\
+-     __result;								\
+-  })
+-#  else
+-#   define CRIS_ATOMIC_INT_CMP_XCHG(atomic, oldval, newval)		\
+-  ({									\
+-     gboolean __result;							\
+-     __asm__ __volatile__ ("\n"						\
+-                           "0:\tclearf p\n\t"				\
+-                           "cmp.d [%[Atomic]], %[OldVal]\n\t"		\
+-                           "bne 1f\n\t"					\
+-                           "ax\n\t"					\
+-                           "move.d %[NewVal], [%[Atomic]]\n\t"		\
+-                           "bcs 0b\n"					\
+-                           "1:\tseq %[Result]"				\
+-                           : [Result] "=&r" (__result),			\
+-                                      "=m" (*(atomic))			\
+-                           : [Atomic] "r" (atomic),			\
+-                             [OldVal] "r" (oldval),			\
+-                             [NewVal] "r" (newval),			\
+-                                      "g" (*(gpointer*) (atomic))	\
+-                           : "memory");					\
+-     __result;								\
+-  })
+-#  endif
+-
+-#define CRIS_CACHELINE_SIZE 32
+-#define CRIS_ATOMIC_BREAKS_CACHELINE(atomic) \
+-  (((gulong)(atomic) & (CRIS_CACHELINE_SIZE - 1)) > (CRIS_CACHELINE_SIZE - sizeof (atomic)))
+-
+-gint     __g_atomic_int_exchange_and_add         (volatile gint   G_GNUC_MAY_ALIAS *atomic,
+-						  gint             val);
+-void     __g_atomic_int_add                      (volatile gint   G_GNUC_MAY_ALIAS *atomic,
+-						  gint             val);
+-gboolean __g_atomic_int_compare_and_exchange     (volatile gint   G_GNUC_MAY_ALIAS *atomic,
+-						  gint             oldval,
+-						  gint             newval);
+-gboolean __g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic,
+-						  gpointer         oldval,
+-						  gpointer         newval);
+-
+-gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic,
+-				       gpointer           oldval,
+-				       gpointer           newval)
++void
++(g_atomic_pointer_set) (volatile void *atomic,
++                        gpointer       newval)
+ {
+-  if (G_UNLIKELY (CRIS_ATOMIC_BREAKS_CACHELINE (atomic)))
+-    return __g_atomic_pointer_compare_and_exchange (atomic, oldval, newval);
++  volatile gpointer *ptr = atomic;
+ 
+-  return CRIS_ATOMIC_INT_CMP_XCHG (atomic, oldval, newval);
++  *ptr = newval;
++  MemoryBarrier ();
+ }
+ 
+ gboolean
+-g_atomic_int_compare_and_exchange (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-				   gint           oldval,
+-				   gint           newval)
++(g_atomic_pointer_compare_and_exchange) (volatile void *atomic,
++                                         gpointer       oldval,
++                                         gpointer       newval)
+ {
+-  if (G_UNLIKELY (CRIS_ATOMIC_BREAKS_CACHELINE (atomic)))
+-    return __g_atomic_int_compare_and_exchange (atomic, oldval, newval);
+-
+-  return CRIS_ATOMIC_INT_CMP_XCHG (atomic, oldval, newval);
++  return InterlockedCompareExchangePointer (atomic, newval, oldval) == oldval;
+ }
+ 
+-gint
+-g_atomic_int_exchange_and_add (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-			       gint           val)
++gssize
++(g_atomic_pointer_add) (volatile void *atomic,
++                        gssize         val)
+ {
+-  gint result;
+-
+-  if (G_UNLIKELY (CRIS_ATOMIC_BREAKS_CACHELINE (atomic)))
+-    return __g_atomic_int_exchange_and_add (atomic, val);
+-
+-  do
+-    result = *atomic;
+-  while (!CRIS_ATOMIC_INT_CMP_XCHG (atomic, result, result + val));
+-
+-  return result;
++#if GLIB_SIZEOF_VOID_P == 8
++  return InterlockedExchangeAdd64 (atomic, val);
++#else
++  return InterlockedExchangeAdd (atomic, val);
++#endif
+ }
+ 
+-void
+-g_atomic_int_add (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-		  gint           val)
++gsize
++(g_atomic_pointer_and) (volatile void *atomic,
++                        gsize          val)
+ {
+-  gint result;
+-
+-  if (G_UNLIKELY (CRIS_ATOMIC_BREAKS_CACHELINE (atomic)))
+-    return __g_atomic_int_add (atomic, val);
+-
+-  do
+-    result = *atomic;
+-  while (!CRIS_ATOMIC_INT_CMP_XCHG (atomic, result, result + val));
++#if GLIB_SIZEOF_VOID_P == 8
++  return InterlockedAnd64 (atomic, val);
++#else
++  return InterlockedAnd (atomic, val);
++#endif
+ }
+ 
+-/* We need the atomic mutex for atomic operations where the atomic variable
+- * breaks the 32 byte cache line since the CRIS architecture does not support
+- * atomic operations on such variables. Fortunately this should be rare.
+- */
+-#  define DEFINE_WITH_MUTEXES
+-#  define g_atomic_int_exchange_and_add __g_atomic_int_exchange_and_add
+-#  define g_atomic_int_add __g_atomic_int_add
+-#  define g_atomic_int_compare_and_exchange __g_atomic_int_compare_and_exchange
+-#  define g_atomic_pointer_compare_and_exchange __g_atomic_pointer_compare_and_exchange
+-
+-# else /* !G_ATOMIC_* */
+-#  define DEFINE_WITH_MUTEXES
+-# endif /* G_ATOMIC_* */
+-#else /* !__GNUC__ */
+-# ifdef G_PLATFORM_WIN32
+-#  define DEFINE_WITH_WIN32_INTERLOCKED
+-# else
+-#  define DEFINE_WITH_MUTEXES
+-# endif
+-#endif /* __GNUC__ */
+-
+-#ifdef DEFINE_WITH_WIN32_INTERLOCKED
+-# include <windows.h>
+-/* Following indicates that InterlockedCompareExchangePointer is
+- * declared in winbase.h (included by windows.h) and needs to be
+- * commented out if not true. It is defined iff WINVER > 0x0400,
+- * which is usually correct but can be wrong if WINVER is set before
+- * windows.h is included.
+- */
+-# if WINVER > 0x0400
+-#  define HAVE_INTERLOCKED_COMPARE_EXCHANGE_POINTER
+-# endif
+-
+-gint32
+-g_atomic_int_exchange_and_add (volatile gint32 G_GNUC_MAY_ALIAS *atomic,
+-			       gint32           val)
++gsize
++(g_atomic_pointer_or) (volatile void *atomic,
++                       gsize          val)
+ {
+-  return InterlockedExchangeAdd (atomic, val);
++#if GLIB_SIZEOF_VOID_P == 8
++  return InterlockedOr64 (atomic, val);
++#else
++  return InterlockedOr (atomic, val);
++#endif
+ }
+ 
+-void     
+-g_atomic_int_add (volatile gint32 G_GNUC_MAY_ALIAS *atomic, 
+-		  gint32           val)
+-{
+-  InterlockedExchangeAdd (atomic, val);
+-}
+-
+-gboolean 
+-g_atomic_int_compare_and_exchange (volatile gint32 G_GNUC_MAY_ALIAS *atomic,
+-				   gint32           oldval,
+-				   gint32           newval)
+-{
+-#ifndef HAVE_INTERLOCKED_COMPARE_EXCHANGE_POINTER
+-  return (guint32) InterlockedCompareExchange ((PVOID*)atomic, 
+-                                               (PVOID)newval, 
+-                                               (PVOID)oldval) == oldval;
++gsize
++(g_atomic_pointer_xor) (volatile void *atomic,
++                        gsize          val)
++{
++#if GLIB_SIZEOF_VOID_P == 8
++  return InterlockedXor64 (atomic, val);
+ #else
+-  return InterlockedCompareExchange (atomic, 
+-                                     newval, 
+-                                     oldval) == oldval;
++  return InterlockedXor (atomic, val);
+ #endif
+ }
+ 
+-gboolean 
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic,
+-				       gpointer           oldval,
+-				       gpointer           newval)
+-{
+-# ifdef HAVE_INTERLOCKED_COMPARE_EXCHANGE_POINTER
+-  return InterlockedCompareExchangePointer (atomic, newval, oldval) == oldval;
+-# else
+-#  if GLIB_SIZEOF_VOID_P != 4 /* no 32-bit system */
+-#   error "InterlockedCompareExchangePointer needed"
+-#  else
+-   return InterlockedCompareExchange (atomic, newval, oldval) == oldval;
+-#  endif
+-# endif
+-}
+-#endif /* DEFINE_WITH_WIN32_INTERLOCKED */
+-
+-#ifdef DEFINE_WITH_MUTEXES
+-/* We have to use the slow, but safe locking method */
+-static GMutex *g_atomic_mutex; 
++#else
++
++#include "gthread.h"
++
++static GStaticMutex g_atomic_lock;
+ 
+ gint
+-g_atomic_int_exchange_and_add (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-			       gint           val)
++(g_atomic_int_get) (volatile gint *atomic)
+ {
+-  gint result;
+-    
+-  g_mutex_lock (g_atomic_mutex);
+-  result = *atomic;
+-  *atomic += val;
+-  g_mutex_unlock (g_atomic_mutex);
++  gint value;
+ 
+-  return result;
++  g_static_mutex_lock (&g_atomic_lock);
++  value = *atomic;
++  g_static_mutex_unlock (&g_atomic_lock);
++
++  return value;
+ }
+ 
++void
++(g_atomic_int_set) (volatile gint *atomic,
++                    gint           value)
++{
++  g_static_mutex_lock (&g_atomic_lock);
++  *atomic = value;
++  g_static_mutex_unlock (&g_atomic_lock);
++}
+ 
+ void
+-g_atomic_int_add (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-		  gint           val)
++(g_atomic_int_inc) (volatile gint *atomic)
+ {
+-  g_mutex_lock (g_atomic_mutex);
+-  *atomic += val;
+-  g_mutex_unlock (g_atomic_mutex);
++  g_static_mutex_lock (&g_atomic_lock);
++  (*atomic)++;
++  g_static_mutex_unlock (&g_atomic_lock);
+ }
+ 
+ gboolean
+-g_atomic_int_compare_and_exchange (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+-				   gint           oldval, 
+-				   gint           newval)
+-{
+-  gboolean result;
+-    
+-  g_mutex_lock (g_atomic_mutex);
+-  if (*atomic == oldval)
+-    {
+-      result = TRUE;
+-      *atomic = newval;
+-    }
+-  else
+-    result = FALSE;
+-  g_mutex_unlock (g_atomic_mutex);
++(g_atomic_int_dec_and_test) (volatile gint *atomic)
++{
++  gboolean is_zero;
++
++  g_static_mutex_lock (&g_atomic_lock);
++  is_zero = --(*atomic) == 0;
++  g_static_mutex_unlock (&g_atomic_lock);
+ 
+-  return result;
++  return is_zero;
+ }
+ 
+ gboolean
+-g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic, 
+-				       gpointer           oldval, 
+-				       gpointer           newval)
+-{
+-  gboolean result;
+-    
+-  g_mutex_lock (g_atomic_mutex);
+-  if (*atomic == oldval)
+-    {
+-      result = TRUE;
+-      *atomic = newval;
+-    }
+-  else
+-    result = FALSE;
+-  g_mutex_unlock (g_atomic_mutex);
++(g_atomic_int_compare_and_exchange) (volatile gint *atomic,
++                                     gint           oldval,
++                                     gint           newval)
++{
++  gboolean success;
++
++  g_static_mutex_lock (&g_atomic_lock);
+ 
+-  return result;
++  if ((success = (*atomic == oldval)))
++    *atomic = newval;
++
++  g_static_mutex_unlock (&g_atomic_lock);
++
++  return success;
+ }
+ 
+-#ifdef G_ATOMIC_OP_MEMORY_BARRIER_NEEDED
+ gint
+-(g_atomic_int_get) (volatile gint G_GNUC_MAY_ALIAS *atomic)
++(g_atomic_int_add) (volatile gint *atomic,
++                    gint           val)
+ {
+-  gint result;
++  gint oldval;
+ 
+-  g_mutex_lock (g_atomic_mutex);
+-  result = *atomic;
+-  g_mutex_unlock (g_atomic_mutex);
++  g_static_mutex_lock (&g_atomic_lock);
++  oldval = *atomic;
++  *atomic = oldval + val;
++  g_static_mutex_unlock (&g_atomic_lock);
+ 
+-  return result;
++  return oldval;
+ }
+ 
+-void
+-(g_atomic_int_set) (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-                  gint           newval)
++guint
++(g_atomic_int_and) (volatile guint *atomic,
++                    guint           val)
+ {
+-  g_mutex_lock (g_atomic_mutex);
+-  *atomic = newval;
+-  g_mutex_unlock (g_atomic_mutex);
++  guint oldval;
++
++  g_static_mutex_lock (&g_atomic_lock);
++  oldval = *atomic;
++  *atomic = oldval & val;
++  g_static_mutex_unlock (&g_atomic_lock);
++
++  return oldval;
+ }
+ 
+-gpointer
+-(g_atomic_pointer_get) (volatile gpointer G_GNUC_MAY_ALIAS *atomic)
++guint
++(g_atomic_int_or) (volatile guint *atomic,
++                   guint           val)
+ {
+-  gpointer result;
++  guint oldval;
+ 
+-  g_mutex_lock (g_atomic_mutex);
+-  result = *atomic;
+-  g_mutex_unlock (g_atomic_mutex);
++  g_static_mutex_lock (&g_atomic_lock);
++  oldval = *atomic;
++  *atomic = oldval | val;
++  g_static_mutex_unlock (&g_atomic_lock);
+ 
+-  return result;
++  return oldval;
+ }
+ 
+-void
+-(g_atomic_pointer_set) (volatile gpointer G_GNUC_MAY_ALIAS *atomic,
+-                      gpointer           newval)
+-{
+-  g_mutex_lock (g_atomic_mutex);
+-  *atomic = newval;
+-  g_mutex_unlock (g_atomic_mutex);
+-}
+-#endif /* G_ATOMIC_OP_MEMORY_BARRIER_NEEDED */   
+-#elif defined (G_ATOMIC_OP_MEMORY_BARRIER_NEEDED)
+-gint
+-(g_atomic_int_get) (volatile gint G_GNUC_MAY_ALIAS *atomic)
++guint
++(g_atomic_int_xor) (volatile guint *atomic,
++                    guint           val)
+ {
+-  G_ATOMIC_MEMORY_BARRIER;
+-  return *atomic;
+-}
++  guint oldval;
+ 
+-void
+-(g_atomic_int_set) (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-                  gint           newval)
+-{
+-  *atomic = newval;
+-  G_ATOMIC_MEMORY_BARRIER; 
++  g_static_mutex_lock (&g_atomic_lock);
++  oldval = *atomic;
++  *atomic = oldval ^ val;
++  g_static_mutex_unlock (&g_atomic_lock);
++
++  return oldval;
+ }
+ 
++
+ gpointer
+-(g_atomic_pointer_get) (volatile gpointer G_GNUC_MAY_ALIAS *atomic)
++(g_atomic_pointer_get) (volatile void *atomic)
+ {
+-  G_ATOMIC_MEMORY_BARRIER;
+-  return *atomic;
+-}   
++  volatile gpointer *ptr = atomic;
++  gpointer value;
++
++  g_static_mutex_lock (&g_atomic_lock);
++  value = *ptr;
++  g_static_mutex_unlock (&g_atomic_lock);
++
++  return value;
++}
+ 
+ void
+-(g_atomic_pointer_set) (volatile gpointer G_GNUC_MAY_ALIAS *atomic,
+-                      gpointer           newval)
++(g_atomic_pointer_set) (volatile void *atomic,
++                        gpointer       newval)
+ {
+-  *atomic = newval;
+-  G_ATOMIC_MEMORY_BARRIER; 
++  volatile gpointer *ptr = atomic;
++
++  g_static_mutex_lock (&g_atomic_lock);
++  *ptr = newval;
++  g_static_mutex_unlock (&g_atomic_lock);
+ }
+-#endif /* DEFINE_WITH_MUTEXES || G_ATOMIC_OP_MEMORY_BARRIER_NEEDED */
+ 
+-#ifdef ATOMIC_INT_CMP_XCHG
+ gboolean
+-g_atomic_int_compare_and_exchange (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-				   gint           oldval,
+-				   gint           newval)
++(g_atomic_pointer_compare_and_exchange) (volatile void *atomic,
++                                         gpointer       oldval,
++                                         gpointer       newval)
+ {
+-  return ATOMIC_INT_CMP_XCHG (atomic, oldval, newval);
+-}
++  volatile gpointer *ptr = atomic;
++  gboolean success;
+ 
+-gint
+-g_atomic_int_exchange_and_add (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-			       gint           val)
+-{
+-  gint result;
+-  do
+-    result = *atomic;
+-  while (!ATOMIC_INT_CMP_XCHG (atomic, result, result + val));
++  g_static_mutex_lock (&g_atomic_lock);
+ 
+-  return result;
+-}
+- 
+-void
+-g_atomic_int_add (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-		  gint           val)
+-{
+-  gint result;
+-  do
+-    result = *atomic;
+-  while (!ATOMIC_INT_CMP_XCHG (atomic, result, result + val));
++  if ((success = (*ptr == oldval)))
++    *ptr = newval;
++
++  g_static_mutex_unlock (&g_atomic_lock);
++
++  return success;
+ }
+-#endif /* ATOMIC_INT_CMP_XCHG */
+ 
+-void 
+-_g_atomic_thread_init (void)
++gssize
++(g_atomic_pointer_add) (volatile void *atomic,
++                        gssize         val)
+ {
+-#ifdef DEFINE_WITH_MUTEXES
+-  g_atomic_mutex = g_mutex_new ();
+-#endif /* DEFINE_WITH_MUTEXES */
++  volatile gssize *ptr = atomic;
++  gssize oldval;
++
++  g_static_mutex_lock (&g_atomic_lock);
++  oldval = *ptr;
++  *ptr = oldval + val;
++  g_static_mutex_unlock (&g_atomic_lock);
++
++  return oldval;
+ }
+ 
+-#ifndef G_ATOMIC_OP_MEMORY_BARRIER_NEEDED
+-gint
+-(g_atomic_int_get) (volatile gint G_GNUC_MAY_ALIAS *atomic)
++gsize
++(g_atomic_pointer_and) (volatile void *atomic,
++                        gsize          val)
+ {
+-  return g_atomic_int_get (atomic);
++  volatile gsize *ptr = atomic;
++  gsize oldval;
++
++  g_static_mutex_lock (&g_atomic_lock);
++  oldval = *ptr;
++  *ptr = oldval & val;
++  g_static_mutex_unlock (&g_atomic_lock);
++
++  return oldval;
+ }
+ 
+-void
+-(g_atomic_int_set) (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-		    gint           newval)
++gsize
++(g_atomic_pointer_or) (volatile void *atomic,
++                       gsize          val)
+ {
+-  g_atomic_int_set (atomic, newval);
++  volatile gsize *ptr = atomic;
++  gsize oldval;
++
++  g_static_mutex_lock (&g_atomic_lock);
++  oldval = *ptr;
++  *ptr = oldval | val;
++  g_static_mutex_unlock (&g_atomic_lock);
++
++  return oldval;
+ }
+ 
+-gpointer
+-(g_atomic_pointer_get) (volatile gpointer G_GNUC_MAY_ALIAS *atomic)
++gsize
++(g_atomic_pointer_xor) (volatile void *atomic,
++                        gsize          val)
+ {
+-  return g_atomic_pointer_get (atomic);
++  volatile gsize *ptr = atomic;
++  gsize oldval;
++
++  g_static_mutex_lock (&g_atomic_lock);
++  oldval = *ptr;
++  *ptr = oldval ^ val;
++  g_static_mutex_unlock (&g_atomic_lock);
++
++  return oldval;
+ }
+ 
+-void
+-(g_atomic_pointer_set) (volatile gpointer G_GNUC_MAY_ALIAS *atomic,
+-			gpointer           newval)
++#endif
++
++/**
++ * g_atomic_int_exchange_and_add:
++ * @atomic: a pointer to a #gint
++ * @val: the value to add
++ *
++ * This function existed before g_atomic_int_add() returned the prior
++ * value of the integer (which it now does).  It is retained only for
++ * compatibility reasons.  Don't use this function in new code.
++ *
++ * Returns: the value of @atomic before the add, signed
++ * Since: 2.4
++ * Deprecated: 2.30: Use g_atomic_int_add() instead.
++ **/
++gint
++g_atomic_int_exchange_and_add (volatile gint *atomic,
++                               gint           val)
+ {
+-  g_atomic_pointer_set (atomic, newval);
++  return (g_atomic_int_add) (atomic, val);
+ }
+-#endif /* G_ATOMIC_OP_MEMORY_BARRIER_NEEDED */
+ 
+-#define __G_ATOMIC_C__
+-#include "galiasdef.c"
+diff -ru glib-2.22.0.ori/glib/gatomic.c~ glib-2.22.0/glib/gatomic.c~
+--- glib-2.22.0.ori/glib/gatomic.c~	2015-08-13 20:54:31.158093198 +0200
++++ glib-2.22.0/glib/gatomic.c~	2015-08-13 20:56:19.822089436 +0200
+@@ -565,7 +565,17 @@
+ 
+ static int atomic_spin_trylock (void)
+ {
+-  return InterlockedCompareExchange (atomic, newval, oldval) == oldval;
++  int result;
++
++  asm volatile (
++    "swp %0, %1, [%2]\n"
++    : "=&r,&r" (result)
++    : "r,0" (1), "r,r" (&atomic_spin)
++    : "memory");
++  if (result == 0)
++    return 0;
++  else
++    return -1;
+ }
+ 
+ static void atomic_spin_lock (void)
+diff -ru glib-2.22.0.ori/glib/gatomic.h glib-2.22.0/glib/gatomic.h
+--- glib-2.22.0.ori/glib/gatomic.h	2015-08-13 20:54:31.158093198 +0200
++++ glib-2.22.0/glib/gatomic.h	2015-08-13 20:59:50.330082148 +0200
+@@ -1,30 +1,22 @@
+-/* GLIB - Library of useful routines for C programming
+- * Copyright (C) 1995-1997  Peter Mattis, Spencer Kimball and Josh MacDonald
+- *
+- * g_atomic_*: atomic operations.
+- * Copyright (C) 2003 Sebastian Wilhelmi
++/*
++ * Copyright © 2011 Ryan Lortie
+  *
+- * This library is free software; you can redistribute it and/or
+- * modify it under the terms of the GNU Lesser General Public
+- * License as published by the Free Software Foundation; either
+- * version 2 of the License, or (at your option) any later version.
++ * This library is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU Lesser General Public License as
++ * published by the Free Software Foundation; either version 2 of the
++ * licence, or (at your option) any later version.
+  *
+- * This library is distributed in the hope that it will be useful,
+- * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * This library is distributed in the hope that it will be useful, but
++ * WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  * Lesser General Public License for more details.
+  *
+  * You should have received a copy of the GNU Lesser General Public
+- * License along with this library; if not, write to the
+- * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+- * Boston, MA 02111-1307, USA.
+- */
+-
+-/*
+- * Modified by the GLib Team and others 1997-2000.  See the AUTHORS
+- * file for a list of people on the GLib Team.  See the ChangeLog
+- * files for a list of changes.  These files are distributed with
+- * GLib at ftp://ftp.gtk.org/pub/gtk/.
++ * License along with this library; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307,
++ * USA.
++ *
++ * Author: Ryan Lortie <desrt@desrt.ca>
+  */
+ 
+ #if defined(G_DISABLE_SINGLE_INCLUDES) && !defined (__GLIB_H_INSIDE__) && !defined (GLIB_COMPILATION)
+@@ -34,52 +26,193 @@
+ #ifndef __G_ATOMIC_H__
+ #define __G_ATOMIC_H__
+ 
+-#include <glib/gtypes.h>
++#include "glib/gtypes.h"
+ 
+ G_BEGIN_DECLS
+ 
+-gint     g_atomic_int_exchange_and_add         (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-						gint      	   val);
+-void     g_atomic_int_add                      (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-						gint      	   val);
+-gboolean g_atomic_int_compare_and_exchange     (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-						gint      	   oldval,
+-						gint      	   newval);
+-gboolean g_atomic_pointer_compare_and_exchange (volatile gpointer G_GNUC_MAY_ALIAS *atomic, 
+-						gpointer  	   oldval, 
+-						gpointer  	   newval);
+-
+-gint     g_atomic_int_get                      (volatile gint G_GNUC_MAY_ALIAS *atomic);
+-void     g_atomic_int_set                      (volatile gint G_GNUC_MAY_ALIAS *atomic,
+-						gint               newval);
+-gpointer g_atomic_pointer_get                  (volatile gpointer G_GNUC_MAY_ALIAS *atomic);
+-void     g_atomic_pointer_set                  (volatile gpointer G_GNUC_MAY_ALIAS *atomic,
+-						gpointer           newval);
+-
+-#ifndef G_ATOMIC_OP_MEMORY_BARRIER_NEEDED
+-# define g_atomic_int_get(atomic) 		((gint)*(atomic))
+-# define g_atomic_int_set(atomic, newval) 	((void) (*(atomic) = (newval)))
+-# define g_atomic_pointer_get(atomic) 		((gpointer)*(atomic))
+-# define g_atomic_pointer_set(atomic, newval)	((void) (*(atomic) = (newval)))
+-#else
+-# define g_atomic_int_get(atomic) \
+- ((void) sizeof (gchar [sizeof (*(atomic)) == sizeof (gint) ? 1 : -1]), \
+-  (g_atomic_int_get) ((volatile gint G_GNUC_MAY_ALIAS *) (void *) (atomic)))
+-# define g_atomic_int_set(atomic, newval) \
+- ((void) sizeof (gchar [sizeof (*(atomic)) == sizeof (gint) ? 1 : -1]), \
+-  (g_atomic_int_set) ((volatile gint G_GNUC_MAY_ALIAS *) (void *) (atomic), (newval)))
+-# define g_atomic_pointer_get(atomic) \
+- ((void) sizeof (gchar [sizeof (*(atomic)) == sizeof (gpointer) ? 1 : -1]), \
+-  (g_atomic_pointer_get) ((volatile gpointer G_GNUC_MAY_ALIAS *) (void *) (atomic)))
+-# define g_atomic_pointer_set(atomic, newval) \
+- ((void) sizeof (gchar [sizeof (*(atomic)) == sizeof (gpointer) ? 1 : -1]), \
+-  (g_atomic_pointer_set) ((volatile gpointer G_GNUC_MAY_ALIAS *) (void *) (atomic), (newval)))
+-#endif /* G_ATOMIC_OP_MEMORY_BARRIER_NEEDED */
+-
+-#define g_atomic_int_inc(atomic) (g_atomic_int_add ((atomic), 1))
+-#define g_atomic_int_dec_and_test(atomic)				\
+-  (g_atomic_int_exchange_and_add ((atomic), -1) == 1)
++gint                    g_atomic_int_get                                (volatile gint  *atomic);
++void                    g_atomic_int_set                                (volatile gint  *atomic,
++                                                                         gint            newval);
++void                    g_atomic_int_inc                                (volatile gint  *atomic);
++gboolean                g_atomic_int_dec_and_test                       (volatile gint  *atomic);
++gboolean                g_atomic_int_compare_and_exchange               (volatile gint  *atomic,
++                                                                         gint            oldval,
++                                                                         gint            newval);
++gint                    g_atomic_int_add                                (volatile gint  *atomic,
++                                                                         gint            val);
++guint                   g_atomic_int_and                                (volatile guint *atomic,
++                                                                         guint           val);
++guint                   g_atomic_int_or                                 (volatile guint *atomic,
++                                                                         guint           val);
++guint                   g_atomic_int_xor                                (volatile guint *atomic,
++                                                                         guint           val);
++
++gpointer                g_atomic_pointer_get                            (volatile void  *atomic);
++void                    g_atomic_pointer_set                            (volatile void  *atomic,
++                                                                         gpointer        newval);
++gboolean                g_atomic_pointer_compare_and_exchange           (volatile void  *atomic,
++                                                                         gpointer        oldval,
++                                                                         gpointer        newval);
++gssize                  g_atomic_pointer_add                            (volatile void  *atomic,
++                                                                         gssize          val);
++gsize                   g_atomic_pointer_and                            (volatile void  *atomic,
++                                                                         gsize           val);
++gsize                   g_atomic_pointer_or                             (volatile void  *atomic,
++                                                                         gsize           val);
++gsize                   g_atomic_pointer_xor                            (volatile void  *atomic,
++                                                                         gsize           val);
++
++#ifndef G_DISABLE_DEPRECATED
++gint                    g_atomic_int_exchange_and_add                   (volatile gint  *atomic,
++                                                                         gint            val);
++#endif
+ 
+ G_END_DECLS
+ 
++#if defined(__GNUC__) && defined(G_ATOMIC_OP_USE_GCC_BUILTINS)
++
++#define g_atomic_int_get(atomic) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gint));                     \
++    (void) (0 ? *(atomic) ^ *(atomic) : 0);                                  \
++    __sync_synchronize ();                                                   \
++    (gint) *(atomic);                                                        \
++  }))
++#define g_atomic_int_set(atomic, newval) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gint));                     \
++    (void) (0 ? *(atomic) ^ (newval) : 0);                                   \
++    *(atomic) = (newval);                                                    \
++    __sync_synchronize ();                                                   \
++  }))
++#define g_atomic_int_inc(atomic) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gint));                     \
++    (void) (0 ? *(atomic) ^ *(atomic) : 0);                                  \
++    (void) __sync_fetch_and_add ((atomic), 1);                               \
++  }))
++#define g_atomic_int_dec_and_test(atomic) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gint));                     \
++    (void) (0 ? *(atomic) ^ *(atomic) : 0);                                  \
++    __sync_fetch_and_sub ((atomic), 1) == 1;                                 \
++  }))
++#define g_atomic_int_compare_and_exchange(atomic, oldval, newval) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gint));                     \
++    (void) (0 ? *(atomic) ^ (newval) ^ (oldval) : 0);                        \
++    (gboolean) __sync_bool_compare_and_swap ((atomic), (oldval), (newval));  \
++  }))
++#define g_atomic_int_add(atomic, val) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gint));                     \
++    (void) (0 ? *(atomic) ^ (val) : 0);                                      \
++    (gint) __sync_fetch_and_add ((atomic), (val));                           \
++  }))
++#define g_atomic_int_and(atomic, val) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gint));                     \
++    (void) (0 ? *(atomic) ^ (val) : 0);                                      \
++    (guint) __sync_fetch_and_and ((atomic), (val));                          \
++  }))
++#define g_atomic_int_or(atomic, val) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gint));                     \
++    (void) (0 ? *(atomic) ^ (val) : 0);                                      \
++    (guint) __sync_fetch_and_or ((atomic), (val));                           \
++  }))
++#define g_atomic_int_xor(atomic, val) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gint));                     \
++    (void) (0 ? *(atomic) ^ (val) : 0);                                      \
++    (guint) __sync_fetch_and_xor ((atomic), (val));                          \
++  }))
++
++#define g_atomic_pointer_get(atomic) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gpointer));                 \
++    __sync_synchronize ();                                                   \
++    (gpointer) *(atomic);                                                    \
++  }))
++#define g_atomic_pointer_set(atomic, newval) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gpointer));                 \
++    (void) (0 ? (gpointer) *(atomic) : 0);                                   \
++    *(atomic) = (__typeof__ (*(atomic))) (gsize) (newval);                   \
++    __sync_synchronize ();                                                   \
++  }))
++#define g_atomic_pointer_compare_and_exchange(atomic, oldval, newval) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gpointer));                 \
++    (void) (0 ? (gpointer) *(atomic) : 0);                                   \
++    (gboolean) __sync_bool_compare_and_swap ((atomic), (oldval), (newval));  \
++  }))
++#define g_atomic_pointer_add(atomic, val) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gpointer));                 \
++    (void) (0 ? (gpointer) *(atomic) : 0);                                   \
++    (void) (0 ? (val) ^ (val) : 0);                                          \
++    (gssize) __sync_fetch_and_add ((atomic), (val));                         \
++  }))
++#define g_atomic_pointer_and(atomic, val) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gpointer));                 \
++    (void) (0 ? (gpointer) *(atomic) : 0);                                   \
++    (void) (0 ? (val) ^ (val) : 0);                                          \
++    (gsize) __sync_fetch_and_and ((atomic), (val));                          \
++  }))
++#define g_atomic_pointer_or(atomic, val) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gpointer));                 \
++    (void) (0 ? (gpointer) *(atomic) : 0);                                   \
++    (void) (0 ? (val) ^ (val) : 0);                                          \
++    (gsize) __sync_fetch_and_or ((atomic), (val));                           \
++  }))
++#define g_atomic_pointer_xor(atomic, val) \
++  (__extension__ ({                                                          \
++    G_STATIC_ASSERT (sizeof *(atomic) == sizeof (gpointer));                 \
++    (void) (0 ? (gpointer) *(atomic) : 0);                                   \
++    (void) (0 ? (val) ^ (val) : 0);                                          \
++    (gsize) __sync_fetch_and_xor ((atomic), (val));                          \
++  }))
++
++#else /* defined(__GNUC__) && defined(G_ATOMIC_OP_USE_GCC_BUILTINS) */
++
++#define g_atomic_int_get(atomic) \
++  (g_atomic_int_get ((gint *) (atomic)))
++#define g_atomic_int_set(atomic, newval) \
++  (g_atomic_int_set ((gint *) (atomic), (gint) (newval)))
++#define g_atomic_int_compare_and_exchange(atomic, oldval, newval) \
++  (g_atomic_int_compare_and_exchange ((gint *) (atomic), (oldval), (newval)))
++#define g_atomic_int_add(atomic, val) \
++  (g_atomic_int_add ((gint *) (atomic), (val)))
++#define g_atomic_int_and(atomic, val) \
++  (g_atomic_int_and ((gint *) (atomic), (val)))
++#define g_atomic_int_or(atomic, val) \
++  (g_atomic_int_or ((gint *) (atomic), (val)))
++#define g_atomic_int_xor(atomic, val) \
++  (g_atomic_int_xor ((gint *) (atomic), (val)))
++#define g_atomic_int_inc(atomic) \
++  (g_atomic_int_inc ((gint *) (atomic)))
++#define g_atomic_int_dec_and_test(atomic) \
++  (g_atomic_int_dec_and_test ((gint *) (atomic)))
++
++#define g_atomic_pointer_get(atomic) \
++  (g_atomic_pointer_get (atomic))
++#define g_atomic_pointer_set(atomic, newval) \
++  (g_atomic_pointer_set ((atomic), (gpointer) (newval)))
++#define g_atomic_pointer_compare_and_exchange(atomic, oldval, newval) \
++  (g_atomic_pointer_compare_and_exchange ((atomic), (gpointer) (oldval), (gpointer) (newval)))
++#define g_atomic_pointer_add(atomic, val) \
++  (g_atomic_pointer_add ((atomic), (gssize) (val)))
++#define g_atomic_pointer_and(atomic, val) \
++  (g_atomic_pointer_and ((atomic), (gsize) (val)))
++#define g_atomic_pointer_or(atomic, val) \
++  (g_atomic_pointer_or ((atomic), (gsize) (val)))
++#define g_atomic_pointer_xor(atomic, val) \
++  (g_atomic_pointer_xor ((atomic), (gsize) (val)))
++
++#endif /* defined(__GNUC__) && defined(G_ATOMIC_OP_USE_GCC_BUILTINS) */
++
+ #endif /* __G_ATOMIC_H__ */
++
+diff -ru glib-2.22.0.ori/glib/glib.symbols glib-2.22.0/glib/glib.symbols
+--- glib-2.22.0.ori/glib/glib.symbols	2015-08-13 20:54:31.166093198 +0200
++++ glib-2.22.0/glib/glib.symbols	2015-08-13 21:05:16.538070853 +0200
+@@ -94,12 +94,11 @@
+ #if IN_FILE(__G_ATOMIC_C__)
+ g_atomic_int_add
+ g_atomic_int_compare_and_exchange
++g_atomic_int_dec_and_test
+ g_atomic_int_exchange_and_add
+-g_atomic_pointer_compare_and_exchange
+ #ifdef INCLUDE_INTERNAL_SYMBOLS
+  /* these are not internal, but we don't want to alias them */
+ g_atomic_int_get
+-g_atomic_pointer_get
+ g_atomic_int_set
+ g_atomic_pointer_set
+ #endif
+diff -ru glib-2.22.0.ori/glib/gthread.c glib-2.22.0/glib/gthread.c
+--- glib-2.22.0.ori/glib/gthread.c	2015-08-13 20:54:31.162093198 +0200
++++ glib-2.22.0/glib/gthread.c	2015-08-13 21:01:50.078078002 +0200
+@@ -161,7 +161,6 @@
+   _g_messages_thread_init_nomessage ();
+ 
+   /* we may run full-fledged initializers from here */
+-  _g_atomic_thread_init ();
+   _g_convert_thread_init ();
+   _g_rand_thread_init ();
+   _g_main_thread_init ();
+diff -ru glib-2.22.0.ori/glib/gthreadpool.c glib-2.22.0/glib/gthreadpool.c
+--- glib-2.22.0.ori/glib/gthreadpool.c	2015-08-13 20:54:31.158093198 +0200
++++ glib-2.22.0/glib/gthreadpool.c	2015-08-13 21:02:14.806077145 +0200
+@@ -153,7 +153,7 @@
+ 	    }
+ 	  else
+ 	    {
+-	      if (g_atomic_int_exchange_and_add (&kill_unused_threads, -1) > 0)
++	      if (g_atomic_int_add (&kill_unused_threads, -1) > 0)
+ 	        {
+ 		  pool = NULL;
+ 		  break;
+diff -ru glib-2.22.0.ori/gobject/gobject.c glib-2.22.0/gobject/gobject.c
+--- glib-2.22.0.ori/gobject/gobject.c	2015-08-13 20:54:31.118093200 +0200
++++ glib-2.22.0/gobject/gobject.c	2015-08-13 21:03:44.622074036 +0200
+@@ -2345,7 +2345,7 @@
+ #endif  /* G_ENABLE_DEBUG */
+ 
+ 
+-  old_val = g_atomic_int_exchange_and_add ((int *)&object->ref_count, 1);
++  old_val = g_atomic_int_add (&object->ref_count, 1);
+ 
+   if (old_val == 1 && OBJECT_HAS_TOGGLE_REF (object))
+     toggle_refs_notify (object, FALSE);
+@@ -2412,8 +2412,8 @@
+       g_signal_handlers_destroy (object);
+       g_datalist_id_set_data (&object->qdata, quark_weak_refs, NULL);
+       
+-      /* decrement the last reference */
+-      is_zero = g_atomic_int_dec_and_test ((int *)&object->ref_count);
++      /* decrement the last reference */      
++      is_zero = g_atomic_int_add (&object->ref_count, -1);
+       
+       /* may have been re-referenced meanwhile */
+       if (G_LIKELY (is_zero)) 
+       

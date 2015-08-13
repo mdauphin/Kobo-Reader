@@ -5,7 +5,8 @@ set -e -u
 
 export KOBO_SCRIPT_DIR="`dirname $0`"
 
-export KOBO_TOOLCHAIN_DIR="$(cd "$(dirname "$0/../toolchain")"; pwd)/$(basename "$0/../toolchain")"
+# Extract toolchain
+export KOBO_TOOLCHAIN_DIR="$(cd "$(dirname "$KOBO_SCRIPT_DIR/../toolchain")"; pwd)/$(basename "$KOBO_SCRIPT_DIR/../toolchain")"
 echo $KOBO_TOOLCHAIN_DIR
 #Check toolchainsgcc-linaro-arm-linux-
 if [ ! -d "$KOBO_TOOLCHAIN_DIR/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux" ]; then

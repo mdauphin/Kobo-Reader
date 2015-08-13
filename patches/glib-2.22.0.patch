@@ -1,0 +1,69 @@
+--- glib2.0-2.22.2/glib/gatomic.c-	2009-12-02 12:39:01.000000000 +0000
++++ glib2.0-2.22.2/glib/gatomic.c	2009-12-02 16:22:03.000000000 +0000
+@@ -563,6 +563,36 @@
+ # elif defined (G_ATOMIC_ARM)
+ static volatile int atomic_spin = 0;
+ 
++/* Use the GCC atomic intrinsics if available.
++   For ARM, the intrinsics require GCC 4.4 or later, and linux 2.6.13 or later*/
++#  ifdef G_ATOMIC_ARM_USE_GCC_INTRINSICS
++
++/* For future compatibility, we can't assume we're not running on an SMP system
++   so memory barriers are needed in general: */
++#   define G_ATOMIC_MEMORY_BARRIER __sync_synchronize()
++
++static void atomic_spin_lock (void)
++{
++  while(__sync_val_compare_and_swap(&atomic_spin, 0, 1))
++    sched_yield(); /* Yield until the lock is successfully obtained. */
++
++  /* A memory barrier is required here, to ensure that the rest of the system
++     does not observe subsequent modifications to data before the lock appears
++     to be taken: */
++  __sync_synchronize();
++}
++
++static void atomic_spin_unlock (void)
++{
++  /* Perform a memory barrier to make sure that the whole system observes the
++     modifications to the protected data as complete before the lock
++     appears relesed: */
++  __sync_synchronize();
++
++  atomic_spin = 0;
++}
++#  else /* !G_ATOMIC_ARM_USE_GCC_INTRINSICS */
++/* If GCC doesn't have the instrinsics, fall back to the old implementation: */
+ static int atomic_spin_trylock (void)
+ {
+   int result;
+@@ -588,6 +618,7 @@
+ {
+   atomic_spin = 0;
+ }
++#  endif /* !G_ATOMIC_ARM_USE_GCC_INTRINSICS */
+ 
+ gint
+ g_atomic_int_exchange_and_add (volatile gint G_GNUC_MAY_ALIAS *atomic, 
+--- glib2.0-2.22.2/configure.in-	2009-12-02 13:43:12.000000000 +0000
++++ glib2.0-2.22.2/configure.in	2009-12-02 13:57:25.000000000 +0000
+@@ -2480,7 +2480,18 @@
+       AC_DEFINE_UNQUOTED(G_ATOMIC_ARM, 1,
+                          [arm atomic implementation])
+       glib_memory_barrier_needed=no
+-      ;;
++      AC_MSG_CHECKING([whether GCC supports atomic intrinsics])
++      AC_TRY_LINK(
++		,[ 
++			__sync_synchronize();
++		],[
++			AC_DEFINE_UNQUOTED(G_ATOMIC_ARM_USE_GCC_INTRINSICS, 1, [define if the GCC atomic intrinsics are to be used for ARM])
++			AC_MSG_RESULT([yes])
++			glib_memory_barrier_needed=yes
++		],[
++			AC_MSG_RESULT([no])
++		])
++      ;;	
+     crisv32*|etraxfs*)
+       AC_MSG_RESULT([crisv32])
+       AC_DEFINE_UNQUOTED(G_ATOMIC_CRISV32, 1,

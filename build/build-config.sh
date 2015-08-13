@@ -20,13 +20,13 @@ PATCHESDIR=${PATCHESDIR:-$def_patches_dir}
 MAKE=${MAKE:-"make"}
 MAKE_JOBS=${MAKE_JOBS:-"2"}
 
-#CROSSTARGET=${CROSSTARGET:-"arm-none-linux-gnueabi"}
 CROSSTARGET=${CROSSTARGET:-"arm-linux-gnueabihf"}
 BUILDHOST=${BUILDHOST:-"x86_64-pc-linux-gnu"}
 
 # Invocation of tools. These should NOT be exported to the environment; the
 # individual scripts decide how and when to pass them to commands.
 CPPFLAGS=${CPPFLAGS:-"-I${DEVICEROOT}/include -I${DEVICEROOT}/usr/include"}
+CFLAGS="-O2 -ffast-math -pipe -fomit-frame-pointer -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mthumb -mfloat-abi=hard -fno-finite-math-only -fno-stack-protector -U_FORTIFY_SOURCE -fPIC -DKOBO_PLATFORM"
 CFLAGS=${CFLAGS:-"${CPPFLAGS}"}
 LIBS=${LIBS:-"-L${DEVICEROOT}/lib -L${DEVICEROOT}/usr/lib"}
 LDFLAGS=${LDFLAGS:-"${LIBS}"}

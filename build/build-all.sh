@@ -5,6 +5,15 @@ set -e -u
 
 export KOBO_SCRIPT_DIR="`dirname $0`"
 
+export KOBO_TOOLCHAIN_DIR="$(cd "$(dirname "$0/../toolchain")"; pwd)/$(basename "$0/../toolchain")"
+echo $KOBO_TOOLCHAIN_DIR
+#Check toolchainsgcc-linaro-arm-linux-
+if [ ! -d "$KOBO_TOOLCHAIN_DIR/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux" ]; then
+	tar xvf "$KOBO_TOOLCHAIN_DIR/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux.tar.bz2" --directory $KOBO_TOOLCHAIN_DIR/
+fi
+export PATH=$PATH:$KOBO_TOOLCHAIN_DIR/gcc-linaro-arm-linux-gnueabihf-4.8-2013.04-20130417_linux/bin
+
+
 while test $# -gt 0; do
 	if test "$1" = "clean"; then
 		echo "Just delete all files in your build directory to clean"

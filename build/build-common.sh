@@ -33,6 +33,13 @@ else
 	exit 1
 fi
 
+
+# Automaticaly apply patch
+echo $PATCHESDIR/$ARCHIVEDIR
+if [ -f $PATCHESDIR/$ARCHIVEDIR.patch ]; then
+	patch -p0 < $PATCHESDIR/$ARCHIVEDIR.patch
+fi 
+
 function markbuilt() {
 	touch status/`basename $0 .sh`
 }

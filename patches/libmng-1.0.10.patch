@@ -1,0 +1,12 @@
+diff -ur libmng-1.0.10.ori/makefiles/configure.in libmng-1.0.10/makefiles/configure.in
+--- libmng-1.0.10.ori/makefiles/configure.in	2015-08-13 16:26:57.877639351 +0200
++++ libmng-1.0.10/makefiles/configure.in	2015-08-13 16:29:45.993632403 +0200
+@@ -15,7 +15,7 @@
+ dnl Checks for programs.
+ AC_PROG_CC
+ AC_ISC_POSIX
+-AM_C_PROTOTYPES
++dnl AM_C_PROTOTYPES
+ if test "x$U" != "x"; then
+   AC_MSG_ERROR(Compiler not ANSI compliant)
+ fi

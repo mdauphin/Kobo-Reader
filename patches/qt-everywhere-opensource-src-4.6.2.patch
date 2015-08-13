@@ -1,7 +1,7 @@
 diff -ur qt-everywhere-opensource-src-4.6.2/mkspecs/qws.ori/linux-arm-g++/qmake.conf qt-everywhere-opensource-src-4.6.2/mkspecs/qws/linux-arm-g++/qmake.conf
 --- qt-everywhere-opensource-src-4.6.2/mkspecs/qws.ori/linux-arm-g++/qmake.conf	2015-08-13 17:51:57.289428618 +0200
 +++ qt-everywhere-opensource-src-4.6.2/mkspecs/qws/linux-arm-g++/qmake.conf	2015-08-13 17:54:34.593422117 +0200
-@@ -7,14 +7,14 @@
+@@ -7,14 +7,18 @@
  include(../../common/qws.conf)
  
  # modifications to g++.conf
@@ -21,5 +21,9 @@ diff -ur qt-everywhere-opensource-src-4.6.2/mkspecs/qws.ori/linux-arm-g++/qmake.
 +QMAKE_AR                = arm-linux-gnueabihf-ar cqs
 +QMAKE_OBJCOPY           = arm-linux-gnueabihf-objcopy
 +QMAKE_STRIP             = arm-linux-gnueabihf-strip
++
++QMAKE_CFLAGS= -march=armv7-a -marm -mthumb-interwork -mfloat-abi=hard -mfpu=neon
++QMAKE_CXXFLAGS= -march=armv7-a -marm -mthumb-interwork -mfloat-abi=hard -mfpu=neon
++
  
  load(qt_config)

@@ -1,0 +1,10 @@
+--- udev-142.ori/udev/udevd.c	2015-08-13 15:35:16.793767502 +0200
++++ udev-142/udev/udevd.c	2015-08-13 15:49:47.897731504 +0200
+@@ -35,6 +35,7 @@
+ #include <sys/wait.h>
+ #include <sys/stat.h>
+ #include <sys/ioctl.h>
++#include <sys/resource.h>
+ #ifdef HAVE_INOTIFY
+ #include <sys/inotify.h>
+ #endif

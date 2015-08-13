@@ -8,7 +8,7 @@
 [ -e $KOBO_SCRIPT_DIR/build-config-user.sh ] && . $KOBO_SCRIPT_DIR/build-config-user.sh
 
 # Where produced binaries should be installed to. It must not have a trailing slash.
-def_device_root=/chroot
+def_device_root=/home/mdauphin/Kobo-Reader/chroot
 DEVICEROOT=${DEVICEROOT:-$def_device_root}
 
 def_archives_dir=$KOBO_SCRIPT_DIR/../packages
@@ -21,7 +21,7 @@ MAKE=${MAKE:-"make"}
 MAKE_JOBS=${MAKE_JOBS:-"2"}
 
 # Target host. Omit any trailing hyphen.
-CROSSTARGET=${CROSSTARGET:-"arm-linux"}
+CROSSTARGET=${CROSSTARGET:-"arm-linux-gnueabihf"}
 
 # Invocation of tools. These should NOT be exported to the environment; the
 # individual scripts decide how and when to pass them to commands.

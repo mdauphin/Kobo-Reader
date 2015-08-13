@@ -6,16 +6,6 @@ set -e -u
 #export PATH=$PATH:/home/max/CodeSourcery/Sourcery_G++_Lite/bin/
 export KOBO_SCRIPT_DIR="`dirname $0`"
 
-while test $# -gt 0; do
-	if test "$1" = "clean"; then
-		echo "Just delete all files in your build directory to clean"
-		exit 0
-	else
-		echo "Unknown argument $1, exiting"
-		exit 1
-	fi
-done
-
 i=$1
 	if echo "${SKIP:-}" | grep -q \\\<"$i"\\\> ; then
 		echo "Building of $i suppressed by \$SKIP"

@@ -5,7 +5,7 @@ ARCHIVEDIR=expat-2.0.1
 . $KOBO_SCRIPT_DIR/build-common.sh
 
 pushd $ARCHIVEDIR
-	./configure --prefix=/ --host=${CROSSTARGET} --disable-static
+	./configure --prefix=/ --host=${CROSSTARGET} --build=${BUILDHOST} --disable-static
 	$MAKE -j$MAKE_JOBS
 	$MAKE DESTDIR=/${DEVICEROOT} install
 popd

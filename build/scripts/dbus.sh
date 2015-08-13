@@ -7,7 +7,7 @@ ARCHIVEDIR=dbus-1.2.4.6permissive
 patch -p0 < $PATCHESDIR/dbus-1.2.4.6permissive_config-in.patch
 pushd $ARCHIVEDIR
 	autoconf
-	CPPFLAGS="${CPPFLAGS}" LIBS="${LIBS}" ./configure --prefix=/ --host=${CROSSTARGET} --disable-abstract-sockets --without-x --disable-static
+	CPPFLAGS="${CPPFLAGS}" LIBS="${LIBS}" ./configure --prefix=/ --host=${CROSSTARGET} --build=${BUILDHOST} --disable-abstract-sockets --without-x --disable-static
 	$MAKE -j$MAKE_JOBS
 	$MAKE DESTDIR=/${DEVICEROOT} install
 popd

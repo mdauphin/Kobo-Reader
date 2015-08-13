@@ -13,7 +13,7 @@ glib_cv_uscore=yes
 EOF
 	) > glib.config.cache
 
-	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" LIBS="-liconv" ./configure --prefix=/${DEVICEROOT} --host=${CROSSTARGET} --disable-man --disable-gtk-doc --disable-silent-rules --cache=glib.config.cache --disable-static --with-libiconv=gnu
+	CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" LIBS="-liconv" ./configure --prefix=/${DEVICEROOT} --host=${CROSSTARGET} --build=${BUILDHOST} --disable-man --disable-gtk-doc --disable-silent-rules --cache=glib.config.cache --disable-static --with-libiconv=gnu
 	$MAKE -j$MAKE_JOBS
 	$MAKE install
 

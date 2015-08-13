@@ -22,6 +22,7 @@ MAKE_JOBS=${MAKE_JOBS:-"2"}
 
 # Target host. Omit any trailing hyphen.
 CROSSTARGET=${CROSSTARGET:-"arm-linux-gnueabihf"}
+BUILDHOST=${BUILDHOST:-"x86_64-pc-linux-gnu"}
 
 # Invocation of tools. These should NOT be exported to the environment; the
 # individual scripts decide how and when to pass them to commands.

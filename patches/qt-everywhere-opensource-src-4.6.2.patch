@@ -1,0 +1,25 @@
+diff -ur qt-everywhere-opensource-src-4.6.2/mkspecs/qws.ori/linux-arm-g++/qmake.conf qt-everywhere-opensource-src-4.6.2/mkspecs/qws/linux-arm-g++/qmake.conf
+--- qt-everywhere-opensource-src-4.6.2/mkspecs/qws.ori/linux-arm-g++/qmake.conf	2015-08-13 17:51:57.289428618 +0200
++++ qt-everywhere-opensource-src-4.6.2/mkspecs/qws/linux-arm-g++/qmake.conf	2015-08-13 17:54:34.593422117 +0200
+@@ -7,14 +7,14 @@
+ include(../../common/qws.conf)
+ 
+ # modifications to g++.conf
+-QMAKE_CC                = arm-linux-gcc
+-QMAKE_CXX               = arm-linux-g++
+-QMAKE_LINK              = arm-linux-g++
+-QMAKE_LINK_SHLIB        = arm-linux-g++
++QMAKE_CC                = arm-linux-gnueabihf-gcc
++QMAKE_CXX               = arm-linux-gnueabihf-g++
++QMAKE_LINK              = arm-linux-gnueabihf-g++
++QMAKE_LINK_SHLIB        = arm-linux-gnueabihf-g++
+ 
+ # modifications to linux.conf
+-QMAKE_AR                = arm-linux-ar cqs
+-QMAKE_OBJCOPY           = arm-linux-objcopy
+-QMAKE_STRIP             = arm-linux-strip
++QMAKE_AR                = arm-linux-gnueabihf-ar cqs
++QMAKE_OBJCOPY           = arm-linux-gnueabihf-objcopy
++QMAKE_STRIP             = arm-linux-gnueabihf-strip
+ 
+ load(qt_config)
